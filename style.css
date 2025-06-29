@@ -112,44 +112,65 @@ h2 {
   gap: 1.5rem;
 }
 
+/* === Project item image effect === */
 .project-item {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+  position: relative;         /* Maakt overlay positionering mogelijk */
+  overflow: hidden;           /* Voorkomt dat overlay buiten de afbeelding valt */
 }
 
 .project-item img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .project-item:hover img {
-  transform: scale(1.05);
-  opacity: 0.3; /* Vervaagt de afbeelding bij hover */
+  opacity: 0.3;               /* Thumbnail vervaagt bij hover */
+  transform: scale(1.05);     /* (Optioneel) subtiel inzoomen */
 }
 
+/* === Overlay container === */
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(100, 150, 100, 0.7); /* Licht groen overlay */
-  color: #fff;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  background: rgba(107, 190, 148, 0.7);  /* Lichtgroene tint (#6BBE94) met 70% transparantie */
+  color: #fff;
+  display: flex;              /* Flexbox voor centreren */
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  opacity: 0;
+  opacity: 0;                 /* Begin onzichtbaar */
   transition: opacity 0.3s ease;
 }
 
 .project-item:hover .overlay {
-  opacity: 1;
+  opacity: 1;                 /* Wordt zichtbaar bij hover */
 }
+
+/* === Container voor naam en jaartal === */
+.overlay-text {
+  display: flex;              /* Flexbox activeert stacking */
+  flex-direction: column;     /* Zet projectnaam en jaartal onder elkaar */
+  align-items: center;        /* Centreert horizontaal */
+  text-align: center;
+  gap: 0.25rem;               /* Kleine ruimte ertussen */
+}
+
+/* === Projectnaam styling === */
+.project-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* === Jaartal styling === */
+.project-year {
+  font-size: 0.9rem;
+  opacity: 0.9;               /* Subtiel verschil in contrast */
+}
+
+
 
 /* ===============================
    Skills Sectie
