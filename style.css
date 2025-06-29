@@ -131,3 +131,49 @@
     height: auto;
     display: block;
   }
+  header {
+  position: sticky; /* of: fixed */
+  top: 0;
+  z-index: 999;
+  background: var(--green); /* Of je hoofdkleur */
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+body {
+  scroll-padding-top: 80px; /* zodat anchor links niet achter header vallen */
+}
+@media (max-width: 600px) {
+    header {
+      padding: 1rem;
+    }
+  
+    section {
+      padding: 0 0.5rem;
+    }
+  
+    .profile-pic {
+      width: 150px;
+    }
+  
+    .project img {
+      max-width: 100%;
+    }
+  
+    nav a {
+      margin: 0 0.5rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+}
+html {
+  scroll-behavior: smooth;
+}
