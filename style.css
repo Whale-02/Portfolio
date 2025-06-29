@@ -1,0 +1,133 @@
+:root {
+    --green: #043927;
+    --sand: #EFE9E1;
+    --gold: #C1A96F;
+    --text: #222;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--sand);
+    color: var(--text);
+  }
+  
+  header {
+    background: var(--green);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  h2 {
+    color: var(--green);
+  }
+  
+  .project {
+    margin-bottom: 2rem;
+  }
+  
+  .project img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    border-radius: 100%;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--green);
+    color: white;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .project-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.3;  /* Vervaagt de afbeelding */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(100, 150, 100, 0.7); /* Licht groen met transparantie */
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-item:hover .overlay {
+    opacity: 1;
+  }
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .img-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
