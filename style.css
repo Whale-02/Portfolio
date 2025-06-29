@@ -83,9 +83,16 @@ h2 {
   flex: 1;
 }
 
-.about-photo {
-  flex: 0 0 150px; /* Pas grootte aan indien nodig */
+.about-photo img {
+  width: 100%;
+  max-width: 200px; /* of 150px, wat jij mooi vindt */
+  height: auto;
+  border-radius: 50%;
+  border: 6px solid var(--green);
+  object-fit: cover;
+  display: block;
 }
+
 
 .about-photo img {
   width: 100%;
