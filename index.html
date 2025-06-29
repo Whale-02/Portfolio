@@ -8,46 +8,49 @@
 </head>
 
 <body>
- <header>
-  <h1>Mauro van der Zwet</h1>
-  <nav>
-    <a href="#overmij">Over mij</a>
-    <a href="#projecten">Projecten</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>Portfolio Mauro van der Zwet</h1>
+    <nav>
+      <a href="#overmij">Over mij</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>
 
-
-  <section id="overmij">
-    <h2>Over mij</h2>
-    <img src="images/profielfoto.jpg" alt="Mauro van der Zwet" class="profile-pic"/>
-    <p>
-      Ik ben een leergierig en creatief persoon met een stevige technische basis vanuit mijn MBO Bouwkunde.
-      Dankzij mijn stages bij een aannemer en een gemeente weet ik hoe de praktijk werkt, zowel technisch
-      als juridisch. Buiten school leer ik graag nieuwe tekenprogramma’s en Programeren. Complexe problemen
-      oplossen en daar iets moois van maken geeft mij de meeste voldoening.
-    </p>
+  <section id="overmij" class="about-me">
+    <div class="about-text">
+      <h2>Over mij</h2>
+      <p>
+        Ik ben een leergierig en creatief persoon met een stevige technische basis vanuit mijn MBO Bouwkunde.
+        Dankzij mijn stages bij een aannemer en een gemeente weet ik hoe de praktijk werkt, zowel technisch als juridisch.
+        Buiten school leer ik graag nieuwe tekenprogramma’s en programmeren. Complexe problemen oplossen en daar iets moois van maken geeft mij de meeste voldoening.
+      </p>
+    </div>
+    <div class="about-photo">
+      <img src="Images/profiel-foto.png" alt="Mauro van der Zwet">
+    </div>
   </section>
 
   <section id="projecten">
     <h2>Architectuurprojecten</h2>
     <div class="project-grid">
-      <a href="projects/paviljoen.html" class="project-item">
+      <a href="projects/paviljoen" class="project-item">
         <img src="Images/paviljoen/thumb.png" alt="Paviljoen">
         <div class="overlay">Paviljoen</div>
       </a>
-      <a href="projects/centrum-voor-bezinning.html" class="project-item">
-        <img src="Images/Centrum-voor-bezining/Thumb.png" alt="Centrum voor Bezinning">
+      <a href="projects/centrum-voor-bezinning" class="project-item">
+        <img src="Images/centrum-voor-bezining/Thumb.png" alt="Centrum voor Bezinning">
         <div class="overlay">Centrum voor Bezinning</div>
       </a>
-      <a href="projects/mixed-use.html" class="project-item">
-        <img src="images/mixed-use/thumb.jpg" alt="Mixed Use">
+      <a href="projects/mixed-use" class="project-item">
+        <img src="Images/mixed-use/thumb.jpg" alt="Mixed Use">
         <div class="overlay">Mixed Use</div>
       </a>
-      <!-- Later meer -->
+      
+      <!-- Meer projecten later -->
     </div>
-  
+    <button class="load-more">Meer laden</button>
+
     <h2>Diverse projecten</h2>
     <div class="project-grid">
       <a href="projects/programmeren.html" class="project-item">
@@ -55,14 +58,13 @@
         <div class="overlay">Programmeren</div>
       </a>
       <a href="projects/maquettes.html" class="project-item">
-        <img src="images/diverse/maquette-thumb.jpg" alt="Maquettes">
+        <img src="images/diverse/maquette-thumb.jpg" alt="Maquettes & Modelbouw">
         <div class="overlay">Maquettes & Modelbouw</div>
       </a>
-      <!-- Voeg andere creatieve dingen toe -->
+      <!-- Meer projecten later -->
     </div>
+    <button class="load-more">Meer laden</button>
   </section>
-  
-  
 
   <section id="skills">
     <h2>Skills</h2>
@@ -73,14 +75,6 @@
       <li>Adobe Creative Suite</li>
       <li>Rhino</li>
     </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mvdzwet2002@gmail.com">mvdzwet2002@gmail.com</a></p>
-    <p>Telefoon: +31 6 38621880</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/">Jouw LinkedIn link</a></p>
-    <p><a href="pdf/CV-Mauro-van-der-Zwet.pdf" download>Download mijn CV (PDF)</a></p>
   </section>
 
   <footer>
