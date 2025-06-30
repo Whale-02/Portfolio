@@ -83,15 +83,28 @@ h2 {
   flex: 1;
 }
 
-.about-photo img {
+.about-photo {
+  flex: 0 0 auto; /* Houdt breedte vast */
+}
+
+.profile-circle {
+  width: 200px;       /* Vierkant! */
+  height: 200px;      /* Vierkant! */
+  border-radius: 50%; /* Maakt het een cirkel */
+  background: var(--green); /* Solide groene achtergrond */
+  overflow: hidden;   /* Snijdt alles buiten de cirkel af */
+  display: flex;      /* Voor centeren */
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-circle img {
   width: 100%;
-  max-width: 200px; /* of 150px, wat jij mooi vindt */
-  height: auto;
-  border-radius: 50%;
-  border: 6px solid var(--green);
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;  /* Zorgt dat je gezicht de cirkel mooi vult */
   display: block;
 }
+
 
 /* ===============================
    Projecten Sectie
@@ -99,14 +112,19 @@ h2 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* desktop: 3 kolommen */
   gap: 1.5rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* === Project item image effect === */
 .project-item {
-  position: relative;         /* Maakt overlay positionering mogelijk */
-  overflow: hidden;           /* Voorkomt dat overlay buiten de afbeelding valt */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px; /* jouw vaste breedte */
+  cursor: pointer;
 }
 
 .project-item img {
@@ -118,7 +136,7 @@ h2 {
 
 .project-item:hover img {
   opacity: 0.3;               /* Thumbnail vervaagt bij hover */
-  transform: scale(1.05);     /* (Optioneel) subtiel inzoomen */
+  transform: scale(1.05);     /* Subtiel inzoomen */
 }
 
 /* === Overlay container === */
@@ -127,12 +145,12 @@ h2 {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(107, 190, 148, 0.7);  /* Lichtgroene tint (#6BBE94) met 70% transparantie */
+  background: rgba(107, 190, 148, 0.7);  /* Lichtgroene tint (#6BBE94) met transparantie */
   color: #fff;
-  display: flex;              /* Flexbox voor centreren */
+  display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;                 /* Begin onzichtbaar */
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
@@ -142,11 +160,11 @@ h2 {
 
 /* === Container voor naam en jaartal === */
 .overlay-text {
-  display: flex;              /* Flexbox activeert stacking */
-  flex-direction: column;     /* Zet projectnaam en jaartal onder elkaar */
-  align-items: center;        /* Centreert horizontaal */
-  text-align: center;
-  gap: 0.25rem;               /* Kleine ruimte ertussen */
+  display: flex;          /* Activeert flexbox */
+  flex-direction: column; /* Zet elementen onder elkaar */
+  align-items: center;    /* Centreert horizontaal */
+  text-align: center;     /* Voor nette uitlijning tekst */
+  gap: 0.25rem;           /* Kleine ruimte ertussen */
 }
 
 /* === Projectnaam styling === */
@@ -155,10 +173,9 @@ h2 {
   font-weight: bold;
 }
 
-/* === Jaartal styling === */
 .project-year {
   font-size: 0.9rem;
-  opacity: 0.9;               /* Subtiel verschil in contrast */
+  opacity: 0.9;
 }
 
 
@@ -174,6 +191,9 @@ h2 {
    =============================== */
 
 footer {
+  position:sticky;
+  bottom: 0;
+  
   text-align: center;
   padding: 2rem;
   background: var(--green);
@@ -235,4 +255,101 @@ footer {
 
 .load-more:focus {
   outline: none;
+}
+
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Zorg dat je de main-content in een <main> tag zet */
+
+footer {
+  background: #043927;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.hero {
+  position: relative;
+  overflow: hidden; /* Zorgt ervoor dat alles buiten de container niet zichtbaar is */
+  max-height: 500px; /* Stel een maximale hoogte in */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Zorgt dat de afbeelding mooi vult en eventueel bijsnijdt */
+  display: block;
+}
+
+/* Voeg een pseudo-element toe voor een soepele overgang aan de onderkant */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Hoogte van de fade */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #EFE9E1 100%); /* Vervaagt naar de achtergrondkleur */
+}
+#andere-projecten .overlay {
+  background: rgba(193, 169, 111, 0.7); /* Bijv. gold tint */
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin-top: 1rem;
+  }
+
+  .profile-circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet: 2 kolommen */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* mobiel: 1 kolom */
+  }
+}
+
+/* Algemene beperking voor afbeeldingen binnen de content */
+section img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Beperk de maximale hoogte */
+  object-fit: cover; /* Snijdt netjes bij indien nodig */
+  display: block;
+}
+
+/* Voor afbeeldingen in flex- of gridcontainers kun je aparte regels toevoegen als het strakker moet */
+.text-photo img,
+.concept-photos img,
+.gallery img {
+  max-height: fit-content; /* Specifieke max hoogte voor kleinere secties */
+  object-fit: cover;
 }
