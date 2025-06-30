@@ -93,15 +93,6 @@ h2 {
   display: block;
 }
 
-
-.about-photo img {
-  width: 100%;
-  border-radius: 50%;
-  border: 6px solid var(--green);
-  object-fit: cover;
-  display: block;
-}
-
 /* ===============================
    Projecten Sectie
    =============================== */
