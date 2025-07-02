@@ -3,7 +3,7 @@
    =============================== */
 
 :root {
-  --green: #043927;      /* Sacramento Green */
+  --green: #123524;      /* phthalo green */
   --sand: #EFE9E1;       /* Zandkleurige achtergrond */
   --gold: #C1A96F;       /* Goudaccent (nu niet gebruikt) */
   --text: #222;          /* Hoofdtekstkleur */
@@ -352,4 +352,48 @@ section img {
 .gallery img {
   max-height: fit-content; /* Specifieke max hoogte voor kleinere secties */
   object-fit: cover;
+}
+
+/* Uitgebreide dynamische sectie die richting kan wijzigen */
+
+.section-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-flex .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: row; /* Zorgt dat tekst en foto's naast elkaar staan */
+}
+
+.section-flex.reverse .content {
+  flex-direction: row-reverse;
+}
+
+.section-flex .text {
+  flex: 1 1 300px;
+}
+
+.section-flex .images {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-flex .images img {
+  width: 100%;
+  object-fit: cover;
+  max-height: fit-content;
+}
+
+@media (max-width: 768px) {
+  .section-flex .content,
+  .section-flex.reverse .content {
+    flex-direction: column;
+  }
 }
