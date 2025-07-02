@@ -1,36 +1,41 @@
-/* ===============================
-   Kleuren & Basisvariabelen
-   =============================== */
-
+/* ========================================
+   KLEUREN & BASISVARIABELEN
+======================================== */
 :root {
-  --green: #123524;      /* phthalo green */
-  --sand: #EFE9E1;       /* Zandkleurige achtergrond */
-  --gold: #C1A96F;       /* Goudaccent (nu niet gebruikt) */
-  --text: #222;          /* Hoofdtekstkleur */
+  --green: #123524;
+  --sand: #EFE9E1;
+  --gold: #C1A96F;
+  --text: #222;
 }
 
-/* ===============================
-   Algemene Body Stijlen
-   =============================== */
-
+/* ========================================
+   ALGEMENE BODY & LAYOUT
+======================================== */
 html {
-  scroll-behavior: smooth; /* Soepele scroll bij anchor links */
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   background: var(--sand);
   color: var(--text);
-  scroll-padding-top: 80px; /* Voorkomt dat anchors onder sticky header vallen */
+  scroll-padding-top: 80px;
+  height: 100%;
 }
 
-/* ===============================
-   Header & Navigatie
-   =============================== */
+main {
+  flex: 1;
+}
 
+/* ========================================
+   HEADER & NAVIGATIE
+======================================== */
 header {
-  position: sticky;   /* Blijft bovenaan plakken bij scrollen */
+  position: sticky;
   top: 0;
   z-index: 999;
   background: var(--green);
@@ -49,10 +54,9 @@ header nav a {
   text-decoration: none;
 }
 
-/* ===============================
-   Sectie Algemene Styling
-   =============================== */
-
+/* ========================================
+   SECTIES ALGEMEEN
+======================================== */
 section {
   max-width: 1000px;
   margin: 2rem auto;
@@ -63,37 +67,35 @@ h2 {
   color: var(--green);
 }
 
-/* ===============================
-   Over Mij Sectie
-   =============================== */
-
+/* ========================================
+   OVER MIJ SECTIE
+======================================== */
 .about-me {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-
-  max-width: 1000px; /* Zelfde als je section */
-  margin: 2rem auto; /* Zelfde marge als section */
-  padding: 0 1rem;   /* Zelfde padding als section */
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
-
 
 .about-text {
   flex: 1;
 }
 
 .about-photo {
-  flex: 0 0 auto; /* Houdt breedte vast */
+  flex: 0 0 auto;
+  margin-top: 1rem;
 }
 
 .profile-circle {
-  width: 200px;       /* Vierkant! */
-  height: 200px;      /* Vierkant! */
-  border-radius: 50%; /* Maakt het een cirkel */
-  background: var(--green); /* Solide groene achtergrond */
-  overflow: hidden;   /* Snijdt alles buiten de cirkel af */
-  display: flex;      /* Voor centeren */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--green);
+  overflow: hidden;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -101,18 +103,42 @@ h2 {
 .profile-circle img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* Zorgt dat je gezicht de cirkel mooi vult */
+  object-fit: cover;
   display: block;
 }
 
+/* ========================================
+   HERO IMAGE
+======================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  max-height: 500px;
+}
 
-/* ===============================
-   Projecten Sectie
-   =============================== */
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #EFE9E1 100%);
+}
+
+/* ========================================
+   PROJECTEN SECTIE
+======================================== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* desktop: 3 kolommen */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   justify-items: center;
   max-width: 1200px;
@@ -123,7 +149,7 @@ h2 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 300px; /* jouw vaste breedte */
+  max-width: 300px;
   cursor: pointer;
 }
 
@@ -135,17 +161,16 @@ h2 {
 }
 
 .project-item:hover img {
-  opacity: 0.3;               /* Thumbnail vervaagt bij hover */
-  transform: scale(1.05);     /* Subtiel inzoomen */
+  opacity: 0.3;
+  transform: scale(1.05);
 }
 
-/* === Overlay container === */
 .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(107, 190, 148, 0.7);  /* Lichtgroene tint (#6BBE94) met transparantie */
+  background: rgba(107, 190, 148, 0.7);
   color: #fff;
   display: flex;
   align-items: center;
@@ -155,19 +180,17 @@ h2 {
 }
 
 .project-item:hover .overlay {
-  opacity: 1;                 /* Wordt zichtbaar bij hover */
+  opacity: 1;
 }
 
-/* === Container voor naam en jaartal === */
 .overlay-text {
-  display: flex;          /* Activeert flexbox */
-  flex-direction: column; /* Zet elementen onder elkaar */
-  align-items: center;    /* Centreert horizontaal */
-  text-align: center;     /* Voor nette uitlijning tekst */
-  gap: 0.25rem;           /* Kleine ruimte ertussen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
 }
 
-/* === Projectnaam styling === */
 .project-name {
   font-size: 1.2rem;
   font-weight: bold;
@@ -178,61 +201,72 @@ h2 {
   opacity: 0.9;
 }
 
+#andere-projecten .overlay {
+  background: rgba(193, 169, 111, 0.7);
+}
 
+/* ========================================
+   SECTION FLEX LAYOUT
+======================================== */
+.section-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-/* ===============================
-   Skills Sectie
-   =============================== */
+.section-flex .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: row;
+}
 
-/* Hier kun je eventueel specifieke skills styling toevoegen als je dat wilt */
+.section-flex.reverse .content {
+  flex-direction: row-reverse;
+}
 
-/* ===============================
-   Footer
-   =============================== */
+.section-flex .text {
+  flex: 1 1 300px;
+}
 
-footer {
-  position:sticky;
-  bottom: 0;
-  
+.section-flex .images {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-flex .images img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ========================================
+   ALGEMENE AFBEELDINGEN LIMIT
+======================================== */
+section img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.text-photo img,
+.concept-photos img,
+.gallery img {
+  max-height: fit-content;
+  object-fit: cover;
+}
+
+/* ========================================
+   LOAD MORE BUTTON
+======================================== */
+.load-more-wrapper {
   text-align: center;
-  padding: 2rem;
-  background: var(--green);
-  color: white;
+  margin-top: 2rem;
 }
-
-/* ===============================
-   Responsive Breakpoints
-   =============================== */
-
-@media (max-width: 600px) {
-  header {
-    padding: 1rem;
-  }
-
-  section {
-    padding: 0 0.5rem;
-  }
-
-  .about-photo {
-    flex: 0 0 100px; /* Kleiner op mobiel */
-  }
-
-  .about-photo img {
-    border-width: 4px;
-  }
-
-  nav a {
-    margin: 0 0.5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* ===============================
-   Meer Laden Knop
-   =============================== */
 
 .load-more {
   display: inline-block;
@@ -257,56 +291,23 @@ footer {
   outline: none;
 }
 
-.load-more-wrapper {
-  text-align: center;
-  margin-top: 2rem;
-}
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-
-/* Zorg dat je de main-content in een <main> tag zet */
-
+/* ========================================
+   FOOTER
+======================================== */
 footer {
-  background: #043927;
-  color: #fff;
+  background: var(--green);
+  color: white;
   text-align: center;
   padding: 2rem 1rem;
 }
-.hero {
-  position: relative;
-  overflow: hidden; /* Zorgt ervoor dat alles buiten de container niet zichtbaar is */
-  max-height: 500px; /* Stel een maximale hoogte in */
-}
 
-.hero img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Zorgt dat de afbeelding mooi vult en eventueel bijsnijdt */
-  display: block;
-}
-
-/* Voeg een pseudo-element toe voor een soepele overgang aan de onderkant */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px; /* Hoogte van de fade */
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #EFE9E1 100%); /* Vervaagt naar de achtergrondkleur */
-}
-#andere-projecten .overlay {
-  background: rgba(193, 169, 111, 0.7); /* Bijv. gold tint */
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+======================================== */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -314,86 +315,34 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-
-  .about-photo {
-    margin-top: 1rem;
-  }
-
   .profile-circle {
     width: 150px;
     height: 150px;
   }
-}
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr); /* tablet: 2 kolommen */
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr; /* mobiel: 1 kolom */
-  }
-}
-
-/* Algemene beperking voor afbeeldingen binnen de content */
-section img {
-  width: 100%;
-  height: auto;
-  max-height: 500px; /* Beperk de maximale hoogte */
-  object-fit: cover; /* Snijdt netjes bij indien nodig */
-  display: block;
-}
-
-/* Voor afbeeldingen in flex- of gridcontainers kun je aparte regels toevoegen als het strakker moet */
-.text-photo img,
-.concept-photos img,
-.gallery img {
-  max-height: fit-content; /* Specifieke max hoogte voor kleinere secties */
-  object-fit: cover;
-}
-
-/* Uitgebreide dynamische sectie die richting kan wijzigen */
-
-.section-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.section-flex .content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  flex-direction: row; /* Zorgt dat tekst en foto's naast elkaar staan */
-}
-
-.section-flex.reverse .content {
-  flex-direction: row-reverse;
-}
-
-.section-flex .text {
-  flex: 1 1 300px;
-}
-
-.section-flex .images {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.section-flex .images img {
-  width: 100%;
-  object-fit: cover;
-  max-height: fit-content;
-}
-
-@media (max-width: 768px) {
   .section-flex .content,
   .section-flex.reverse .content {
     flex-direction: column;
   }
 }
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+  }
+  section {
+    padding: 0 0.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .about-photo {
+    flex: 0 0 100px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

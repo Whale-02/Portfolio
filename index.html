@@ -2,14 +2,13 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mauro van der Zwet | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<script src="/js/projectOverlay.js"></script>
-
 
 <body>
+  <!-- HEADER -->
   <header>
     <h1>Portfolio Mauro van der Zwet</h1>
     <nav>
@@ -19,39 +18,42 @@
     </nav>
   </header>
 
-  <section id="overmij" class="about-me">
-    <div class="about-text">
-      <h2>Over mij</h2>
-      <p>
-        Hoi, ik ben Mauro van der Zwet. 
-        Ik ben een architect in opleiding met een passie voor het creëren van unieke ruimtes die de zintuigen prikkelen. 
-        Mijn ontwerpen zijn geïnspireerd door de natuur en de menselijke ervaring. 
-        Ik geloof dat architectuur niet alleen functioneel moet zijn, maar ook emotioneel en esthetisch aanspreekt.
-      </p>
-    </div>
-    <div class="about-photo">
-      <div class="profile-circle">
-        <img src="Images/profiel-foto.png" alt="Mauro van der Zwet">
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- OVER MIJ -->
+    <section id="overmij" class="about-me">
+      <div class="about-text">
+        <h2>Over mij</h2>
+        <p>
+          Hoi, ik ben Mauro van der Zwet.
+          Ik ben een architect in opleiding met een passie voor het creëren van unieke ruimtes die de zintuigen prikkelen.
+          Mijn ontwerpen zijn geïnspireerd door de natuur en de menselijke ervaring.
+          Ik geloof dat architectuur niet alleen functioneel moet zijn, maar ook emotioneel en esthetisch aanspreekt.
+        </p>
       </div>
-    </div>
-  </section>
+      <div class="about-photo">
+        <div class="profile-circle">
+          <img src="Images/profiel-foto.png" alt="Portretfoto Mauro van der Zwet" />
+        </div>
+      </div>
+    </section>
 
-  <section id="projecten">
-    <h2>Architectuurprojecten</h2>
+    <!-- PROJECTEN -->
+    <section id="projecten">
+      <h2>Architectuurprojecten</h2>
       <div class="project-grid">
-        <div class="Project-card">
         <a href="projects/paviljoen.html" class="project-item">
-          <img src="Images/paviljoen/thumb.png" alt="Paviljoen">
+          <img src="Images/paviljoen/thumb.png" alt="Paviljoen project thumbnail" />
           <div class="overlay">
             <div class="overlay-text">
-            <span class="project-name">Paviljoen</span>
-            <span class="project-year">2024</span>
+              <span class="project-name">Paviljoen</span>
+              <span class="project-year">2024</span>
             </div>
           </div>
         </a>
-        </div>
+
         <a href="projects/centrum-voor-bezinning.html" class="project-item">
-          <img src="Images/centrum-voor-bezinning/thumb.png" alt="Centrum voor Bezinning">
+          <img src="Images/centrum-voor-bezinning/thumb.png" alt="Centrum voor Bezinning project thumbnail" />
           <div class="overlay">
             <div class="overlay-text">
               <span class="project-name">Centrum voor Bezinning</span>
@@ -59,57 +61,62 @@
             </div>
           </div>
         </a>
+
         <a href="projects/mixed-use.html" class="project-item">
-          <img src="Images/mixed-use/thumb.png" alt="Mixed Use">
+          <img src="Images/mixed-use/thumb.png" alt="Mixed Use project thumbnail" />
           <div class="overlay">
             <div class="overlay-text">
               <span class="project-name">Mixed Use</span>
-              <span class="project-year">2024</span>  
+              <span class="project-year">2024</span>
             </div>
           </div>
         </a>
-      </section>
-        <!-- Meer projecten later -->
-         <div class="load-more-wrapper">
+      </div>
+
+      <div class="load-more-wrapper">
         <button class="load-more">Meer laden</button>
       </div>
-     </div>
-    
+    </section>
 
-  <section id="andere-projecten">
-  <h2>Andere Projecten</h2>
-  <div class="project-grid">
-    <a href="projects/timber.html" class="project-item">
-      <img src="Images/timber/thumb.png" alt="Timber Game">
-      <div class="overlay">
-        <div class="overlay-text">
-          <span class="project-name">Timber</span>
-          <span class="project-year">2023</span>
-        </div>
+    <!-- ANDERE PROJECTEN -->
+    <section id="andere-projecten">
+      <h2>Andere Projecten</h2>
+      <div class="project-grid">
+        <a href="projects/timber.html" class="project-item">
+          <img src="Images/timber/thumb.png" alt="Timber game project thumbnail" />
+          <div class="overlay">
+            <div class="overlay-text">
+              <span class="project-name">Timber</span>
+              <span class="project-year">2023</span>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-    <!-- Meer items later -->
-  </div>
-  <div class="load-more-wrapper">
-    <button class="load-more">Meer laden</button>
-  </div>
-</section>
 
+      <div class="load-more-wrapper">
+        <button class="load-more">Meer laden</button>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Revit</li>
-      <li>AutoCAD</li>
-      <li>SketchUp</li>
-      <li>Adobe Creative Suite</li>
-      <li>Rhino</li>
-    </ul>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Revit</li>
+        <li>AutoCAD</li>
+        <li>SketchUp</li>
+        <li>Adobe Creative Suite</li>
+        <li>Rhino</li>
+      </ul>
+    </section>
+  </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Mauro van der Zwet</p>
   </footer>
 
+  <!-- JAVASCRIPT BESTAND -->
+  <script src="js/projectOverlay.js"></script>
 </body>
 </html>
