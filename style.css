@@ -58,7 +58,7 @@ header nav a {
    SECTIES ALGEMEEN
 ======================================== */
 section {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -72,7 +72,7 @@ h2 {
 ======================================== */
 .about-me {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   gap: 2rem;
   max-width: 1000px;
@@ -141,7 +141,7 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   justify-items: center;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -149,7 +149,7 @@ h2 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   cursor: pointer;
 }
 
@@ -346,3 +346,79 @@ footer {
   }
 }
 
+
+/* ===== FOTO SLIDER MET ASPECT-RATIO ===== */
+
+.photo-slider {
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* Geen aspect-ratio! */
+}
+
+.slides-track {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* Laat hoogte bepalen door de afbeelding zelf */
+  object-fit: contain; /* Of cover, wat jij wil */
+  display: block;
+}
+
+.slide .caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Knoppen */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #043927;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background: #055f3b;
+  opacity: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .prev-button,
+  .next-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+}
