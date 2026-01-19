@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Garden — Immersive</title>
+    <meta
+      name="description"
+      content="The Garden — immersive playground van Mauro: games, foto, experiments."
+    />
+    <link rel="stylesheet" href="../css/garden.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/3d-models.css" />
+  </head>
+
+  <body>
+    <!-- Fixed top HUD -->
+    <header class="hud" data-header>
+      <!-- left: burger + brand -->
+      <div class="hud__left">
+        <button
+          class="hud__burger"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+          data-drawer-open
+        >
+          <span class="hud__burgerLines" aria-hidden="true"></span>
+        </button>
+
+        <a class="hud__brand" href="/index.html">
+          <span class="hud__seed" aria-hidden="true"></span>
+          <span class="hud__brandText">The Garden</span>
+        </a>
+      </div>
+
+      <!-- center: page anchors -->
+      <nav class="hud__nav" aria-label="Snelnavigatie" data-nav>
+        <a href="#intro" class="hud__link">Intro</a>
+        <a href="#path" class="hud__link">Path</a>
+        <a href="#games" class="hud__link">Games</a>
+        <a href="#photo" class="hud__link">Foto</a>
+        <a href="#lab" class="hud__link">Lab</a>
+        <a href="#archive" class="hud__link">Archive</a>
+      </nav>
+
+      <!-- right: actions -->
+      <div class="hud__right">
+        <a class="hud__pill" href="/architecture/index.html">Architectuur →</a>
+      </div>
+
+      <!-- Drawer -->
+      <div class="drawer" id="drawer" data-drawer aria-hidden="true">
+        <div class="drawer__backdrop" data-drawer-close></div>
+
+        <aside
+          class="drawer__panel"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Menu"
+          tabindex="-1"
+        >
+          <div class="drawer__top">
+            <div class="drawer__title">
+              <span class="drawer__seed" aria-hidden="true"></span>
+              <div>
+                <div class="drawer__name">Navigate</div>
+                <div class="drawer__meta">----</div>
+              </div>
+            </div>
+
+            <button
+              class="drawer__close"
+              type="button"
+              aria-label="Close menu"
+              data-drawer-close
+            >
+              ✕
+            </button>
+          </div>
+
+          <!-- content grid: visual + nav -->
+          <div class="drawer__content">
+            <div class="drawer__visual">
+              <!-- Foto / overlay / whatever -->
+              <img src="/assets/nav/garden.jpg" alt="" loading="lazy" />
+              <div class="drawer__visualOverlay">
+                <div class="drawer__visualTitle">The Garden</div>
+                <div class="drawer__visualSub">Immersive · games · foto</div>
+              </div>
+            </div>
+
+            <nav class="drawer__nav" aria-label="Main navigation">
+              <!-- Zet per pagina de juiste link op is-active -->
+              <a class="drawer__link" href="/index.html">
+                <span class="drawer__icon" aria-hidden="true">◼︎</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">Main</span>
+                  <span class="drawer__desc">Landing / keuze</span>
+                </span>
+              </a>
+
+              <a class="drawer__link" href="/architecture/index.html">
+                <span class="drawer__icon" aria-hidden="true">▦</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">Architectuur</span>
+                  <span class="drawer__desc"
+                    >Strak · projecten · uitwerking</span
+                  >
+                </span>
+              </a>
+
+              <a class="drawer__mini" href="/architecture/index.html#projecten"
+                >→ Projecten</a
+              >
+
+              <a class="drawer__link is-active" href="/garden/index.html">
+                <span class="drawer__icon" aria-hidden="true">✳︎</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">The Garden</span>
+                  <span class="drawer__desc">Immersive · games · foto</span>
+                </span>
+              </a>
+              <a class="drawer__mini" href="#games">→ Games</a>
+              <a class="drawer__mini" href="#photo">→ Foto</a>
+              <a class="drawer__mini" href="#lab">→ Lab</a>
+              <a class="drawer__mini" href="#archive">→ Archive</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <!-- Fixed side “compass” -->
+    <aside class="compass" aria-label="Secties">
+      <a class="compass__dot" href="#intro"><span>Intro</span></a>
+      <a class="compass__dot" href="#path"><span>Path</span></a>
+      <a class="compass__dot" href="#games"><span>Games</span></a>
+      <a class="compass__dot" href="#photo"><span>Foto</span></a>
+      <a class="compass__dot" href="#lab"><span>Lab</span></a>
+      <a class="compass__dot" href="#archive"><span>Archive</span></a>
+    </aside>
+
+    <!-- Main “experience” -->
+    <main class="experience" data-scroll-root>
+      <!-- Scene 1 -->
+      <section id="intro" class="scene scene--intro" aria-label="Intro">
+        <div class="scene__bg" aria-hidden="true"></div>
+
+        <div class="scene__content wrap">
+          <p class="kicker">
+            <span class="kicker__spark" aria-hidden="true"></span>
+            curated chaos / side quests / things that grow
+          </p>
+          <h1 class="title__glass">The Garden</h1>
+          <span class="title__sub">Immersive playground</span>
+          <p class="lead">
+            Alles wat buiten school om ontstaat: games, fotografie, UI,
+            experiments.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn--accent" href="#path">Start the walk</a>
+            <a class="btn" href="#archive">Jump to archive</a>
+          </div>
+
+          <!-- <p class="hint">
+            Scroll / trackpad — elke sectie “snapt” fullscreen.
+          </p> -->
+        </div>
+      </section>
+
+      <!-- Scene 2 -->
+      <section id="path" class="scene scene--path" aria-label="Path">
+        <div class="scene__bg scene__bg--parallax" aria-hidden="true"></div>
+
+        <div class="scene__content wrap split">
+          <h2 class="heading">Choose a subject.</h2>
+          <p class="lead small">
+            Snelle routes. Later maak je hier echte pages van. Nu is het een
+            immersive index.
+          </p>
+          <div class="split__left">
+            <div class="path">
+              <a class="path__card" href="#games">
+                <span class="path__tag">01</span>
+                <span class="path__title">Games</span>
+                <span class="path__meta">Unity / Web / Prototypes</span>
+              </a>
+
+              <a class="path__card" href="#photo">
+                <span class="path__tag">02</span>
+                <span class="path__title">Fotografie</span>
+                <span class="path__meta">Series / Walks / Details</span>
+              </a>
+
+              <a class="path__card" href="#lab">
+                <span class="path__tag">03</span>
+                <span class="path__title">Lab</span>
+                <span class="path__meta">UI / 3D / Experiments</span>
+              </a>
+
+              <a class="path__card" href="#archive">
+                <span class="path__tag">04</span>
+                <span class="path__title">Archive</span>
+                <div class="path__content">
+                  <span class="path__meta">Alles bij elkaar</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="split__right">
+            <div class="poster">
+              <div class="poster__frame">
+                <!-- vervang door jouw visuals -->
+                <div class="poster__img" aria-hidden="true"></div>
+              </div>
+              <p class="poster__cap">
+                Tip: zet hier een moving/stills collage (later eventueel video).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 3 -->
+      <section id="games" class="scene scene--cases" aria-label="Games">
+        <div class="scene__bg" aria-hidden="true"></div>
+
+        <div class="scene__content wrap">
+          <div class="scene__head">
+            <h2 class="heading">Games</h2>
+            <p class="lead small">
+              3–6 featured cases. Grote visuals, minimale tekst.
+            </p>
+          </div>
+
+          <div class="cases">
+            <a class="case" href="#">
+              <div class="case__media case__media--a" aria-hidden="true"></div>
+              <div class="case__body">
+                <p class="case__k">Out of Place</p>
+                <p class="case__d">
+                  Cozy 2D puzzlegame — UI + art direction + build.
+                </p>
+                <p class="case__m">Unity / WebGL</p>
+              </div>
+            </a>
+
+            <a class="case" href="#">
+              <div class="case__media case__media--b" aria-hidden="true"></div>
+              <div class="case__body">
+                <p class="case__k">Pantheon of Legends</p>
+                <p class="case__d">Card based team-building prototype.</p>
+                <p class="case__m">Web / backend</p>
+              </div>
+            </a>
+
+            <a class="case" href="#">
+              <div class="case__media case__media--c" aria-hidden="true"></div>
+              <div class="case__body">
+                <p class="case__k">Micro prototypes</p>
+                <p class="case__d">
+                  Kleine mechanics, snelle iteraties, schoon UX.
+                </p>
+                <p class="case__m">Concept → playable</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="scene__footer">
+            <a class="btn btn--ghost" href="#photo">Next: Fotografie →</a>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Scene 4 -->
+      <section id="photo" class="scene scene--photo" aria-label="Fotografie">
+        <div class="scene__bg scene__bg--parallax" aria-hidden="true"></div>
+
+        <div class="scene__content wrap">
+          <div class="scene__head">
+            <h2 class="heading">Photografy</h2>
+            <p class="lead small">Series > losse shots. Laat ritme zien.</p>
+          </div>
+
+          <div class="gallery">
+            <a class="shot shot--wide" href="#" aria-label="Serie 1">
+              <span class="shot__label">Architecture Walks</span>
+            </a>
+            <a class="shot" href="#" aria-label="Serie 2">
+              <span class="shot__label">Textures</span>
+            </a>
+            <a class="shot" href="#" aria-label="Serie 3">
+              <span class="shot__label">Night</span>
+            </a>
+            <a class="shot shot--tall" href="#" aria-label="Serie 4">
+              <span class="shot__label">Details</span>
+            </a>
+            <a class="shot" href="#" aria-label="Serie 5">
+              <span class="shot__label">People</span>
+            </a>
+          </div>
+
+          <!-- <div class="scene__footer">
+            <a class="btn btn--ghost" href="#lab">Next: Lab →</a>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Scene 5 -->
+      <section id="lab" class="scene scene--lab" aria-label="Lab">
+        <div class="scene__bg" aria-hidden="true"></div>
+
+        <div class="scene__content wrap split">
+          <h2 class="heading">Lab</h2>
+          <p class="lead small">
+            UI, 3D, tools, experiments.
+            <!-- Dit is waar je “speelse” identiteit hard scoort. -->
+          </p>
+          <div class="split__left">
+            <div class="stack">
+              <a class="stack__item" href="#">
+                <span class="stack__n">A</span>
+                <span class="stack__t">UI / Motion studies</span>
+                <span class="stack__m">micro-interactions, clean layout</span>
+              </a>
+              <a class="stack__item" href="#">
+                <span class="stack__n">B</span>
+                <span class="stack__t">3D / Sculpt refs</span>
+                <span class="stack__m">boards, orthos, iso</span>
+              </a>
+              <a class="stack__item" href="#">
+                <span class="stack__n">C</span>
+                <span class="stack__t">Automation tools</span>
+                <span class="stack__m">VBA / scripts / workflows</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="split__right">
+            <div class="ambient">
+              <!-- <div class="ambient__orb"></div>
+              <div class="ambient__orb--2"></div>
+              <div class="ambient__orb--3"></div> -->
+              <div class="view__model">
+                <div id="displayPoster" class="ambient__model">
+                  <model-viewer
+                    canvas-id="plantViewer"
+                    src="../assets/models/plant.glb"
+                    camera-controls
+                    tone-mapping="neutral"
+                    poster="poster.webp"
+                    shadow-intensity="1"
+                    exposure="0.35"
+                    style="background-color: unset"
+                  >
+                    <div class="progress-bar hide" slot="progress-bar">
+                      <div class="update-bar"></div>
+                    </div>
+                  </model-viewer>
+                </div>
+              </div>
+
+              <p class="ambient__cap">3d model plant</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 6 -->
+      <section id="archive" class="scene scene--archive" aria-label="Archive">
+        <div class="scene__bg" aria-hidden="true"></div>
+
+        <div class="scene__content wrap">
+          <div class="scene__head">
+            <h2 class="heading">Archive</h2>
+            <p class="lead small">
+              Alles (filter later met JS). Nu: curated lijst.
+            </p>
+          </div>
+
+          <div class="archive">
+            <a class="archive__row" href="#"
+              ><span>Out of Place</span><span>Game</span><span>2025</span></a
+            >
+            <a class="archive__row" href="#"
+              ><span>Pantheon of Legends</span><span>Game</span
+              ><span>2025</span></a
+            >
+            <a class="archive__row" href="#"
+              ><span>Architecture Walks</span><span>Photo</span
+              ><span>2024–</span></a
+            >
+            <a class="archive__row" href="#"
+              ><span>Textures Library</span><span>Photo</span
+              ><span>2024–</span></a
+            >
+            <a class="archive__row" href="#"
+              ><span>UI / Motion studies</span><span>Lab</span
+              ><span>2025–</span></a
+            >
+            <a class="archive__row" href="#"
+              ><span>Automation Toolkit</span><span>Tool</span
+              ><span>2025–</span></a
+            >
+          </div>
+
+          <div class="scene__footer">
+            <a class="btn btn--accent" href="#intro">Back to start</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="end">
+      <div class="wrap end__row">
+        <p>© <span id="y"></span> Mauro — The Garden</p>
+        <div class="end__links">
+          <a href="#">Instagram</a>
+          <a href="#">Itch.io</a>
+          <a href="#">GitHub</a>
+          <a href="#">Mail</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/header.js"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+  </body>
+</html>
