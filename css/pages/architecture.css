@@ -1,0 +1,18 @@
+/* Architecture page only */
+
+.arch-grid .arch-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.arch-thumb {
+  height: 160px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(120deg, rgba(110,231,255,.10), rgba(180,140,255,.08), rgba(88,255,166,.06)),
+    rgba(255,255,255,.02);
+}
+
+.arch-card > .stack {
+  padding: clamp(14px, 2vw, 18px);
+}

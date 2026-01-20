@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!doctype html>
+<html lang="nl" data-realm="arch">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Architectuur — Mauro</title>
     <meta
       name="description"
-      content="Architectuur portfolio van Mauro — geselecteerde projecten, strak zwart-wit met subtiele gradient-accenten."
+      content="Architectuur: geselecteerde projecten met focus op concept, logica en detail."
     />
-    <link rel="stylesheet" href="../css/architecture.css" />
-    <link rel="stylesheet" href="../css/header.css" />
+
+    <!-- Core -->
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <!-- Page -->
+    <link rel="stylesheet" href="/css/pages/architecture.css" />
   </head>
 
   <body>
-    <div class="topline"></div>
+    <div class="topline" aria-hidden="true"></div>
 
+    <!-- NAV (shared) -->
     <header class="hud" data-header>
-      <!-- left: burger + brand -->
       <div class="hud__left">
         <button
           class="hud__burger"
@@ -31,23 +38,20 @@
 
         <a class="hud__brand" href="/index.html">
           <span class="hud__seed" aria-hidden="true"></span>
-          <span class="hud__brandText">Architecture</span>
+          <span class="hud__brandText">Mauro</span>
         </a>
       </div>
 
-      <!-- center: page anchors (optioneel per pagina) -->
       <nav class="hud__nav" aria-label="Snelnavigatie" data-nav>
-        <a href="#intro" class="hud__link">Intro</a>
-        <a href="#about-me" class="hud__link">About me</a>
-        <a href="#projecten" class="hud__link">Projects</a>
+        <a href="#projecten" class="hud__link">Projecten</a>
+        <a href="#skills" class="hud__link">Skills</a>
+        <a href="#contact" class="hud__link">Contact</a>
       </nav>
 
-      <!-- right: actions -->
       <div class="hud__right">
-        <a class="hud__pill" href="../garden/index.html">The Garden →</a>
+        <a class="hud__pill" href="/garden/index.html">The Garden →</a>
       </div>
 
-      <!-- Drawer menu -->
       <div class="drawer" id="drawer" data-drawer aria-hidden="true">
         <div class="drawer__backdrop" data-drawer-close></div>
 
@@ -56,13 +60,14 @@
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
+          tabindex="-1"
         >
           <div class="drawer__top">
             <div class="drawer__title">
               <span class="drawer__seed" aria-hidden="true"></span>
               <div>
                 <div class="drawer__name">Navigate</div>
-                <div class="drawer__meta">Kies je route</div>
+                <div class="drawer__meta">Architectuur</div>
               </div>
             </div>
 
@@ -77,8 +82,7 @@
           </div>
 
           <nav class="drawer__nav" aria-label="Main navigation">
-            <!-- Zet per pagina de juiste link op is-active -->
-            <a class="drawer__link is-active" href="/index.html">
+            <a class="drawer__link" href="/index.html">
               <span class="drawer__icon" aria-hidden="true">◼︎</span>
               <span class="drawer__text">
                 <span class="drawer__label">Main</span>
@@ -86,11 +90,11 @@
               </span>
             </a>
 
-            <a class="drawer__link" href="/architecture/index.html">
+            <a class="drawer__link is-active" href="/architecture/index.html">
               <span class="drawer__icon" aria-hidden="true">▦</span>
               <span class="drawer__text">
                 <span class="drawer__label">Architectuur</span>
-                <span class="drawer__desc">Strak · projecten · uitwerking</span>
+                <span class="drawer__desc">Projecten · uitwerking</span>
               </span>
             </a>
 
@@ -102,246 +106,175 @@
               </span>
             </a>
           </nav>
-
-          <!-- uitbreidbaar -->
-          <div class="drawer__section">
-            <div class="drawer__sectionTitle">Later</div>
-            <a class="drawer__mini" href="/garden/index.html#archive"
-              >→ Archive</a
-            >
-            <a class="drawer__mini" href="/architecture/index.html#projects"
-              >→ Projecten</a
-            >
-          </div>
         </aside>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div class="hero-card">
-            <div class="hero-main">
-              <div class="kicker">
-                <span class="dot" aria-hidden="true"></span>
-                <span>Strak · zwart/wit · één accent</span>
-              </div>
-
-              <h1>Architectuur portfolio</h1>
-              <p class="lead">
-                Geselecteerde projecten met focus op concept, ruimtelijke logica
-                en detaillering. Minimalistisch gepresenteerd — geen ruis,
-                alleen het werk.
-              </p>
-
-              <div class="hero-actions">
-                <a class="btn primary" href="#"
-                  ><span>Bekijk geselecteerde projecten</span></a
-                >
-                <a class="btn" href="#"><span>Over mij</span></a>
-              </div>
-
-              <div class="meta">
-                <div class="pill"><strong>3e jaar</strong> · Bouwkunde HvA</div>
-                <div class="pill">
-                  <strong>Focus</strong> · ontwerp + techniek
-                </div>
-                <div class="pill">
-                  <strong>Tools</strong> · SketchUp / Rhino / Layout
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <aside class="hero-card">
-            <div class="hero-side">
-              <div class="side-title">
-                <h2>Highlights</h2>
-                <a href="#">Alles →</a>
-              </div>
-
-              <div class="feature">
-                <div class="icon" aria-hidden="true"></div>
-                <p>
-                  <strong>Greengym</strong><br />Sportgebouw met
-                  natuurinclusieve strategieën en groendak.
-                </p>
-              </div>
-
-              <div class="feature">
-                <div class="icon" aria-hidden="true"></div>
-                <p>
-                  <strong>Centrum voor Bezinning</strong><br />Brutalistisch
-                  paviljoen: licht → donker → uitzicht.
-                </p>
-              </div>
-
-              <div class="feature">
-                <div class="icon" aria-hidden="true"></div>
-                <p>
-                  <strong>Herbestemming</strong><br />Bestaande structuur als
-                  kader; nieuwe laag als logische ingreep.
-                </p>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <div class="wrap">
-        <div class="section-head">
-          <div>
-            <h2>Geselecteerde projecten</h2>
-            <p>
-              3–6 kaarten werkt het beste. Alles daarbuiten naar de
-              projectenpagina.
+    <main class="page">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container">
+          <div class="stack">
+            <p class="kicker">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Architectuur</span>
             </p>
+
+            <h1 class="h1">Projecten</h1>
+
+            <p class="lead">
+              Selectie van werk met focus op concept, ruimtelijke logica en
+              detail.
+            </p>
+
+            <div class="cluster">
+              <!-- <a class="pill" href="#projecten">Bekijk projecten ↓</a>
+              <a class="pill" href="/index.html">Terug naar main</a> -->
+            </div>
           </div>
-          <a class="btn" href="#"><span>Alle projecten</span></a>
         </div>
+      </section>
 
-        <section class="grid" id="projecten" aria-label="Projectoverzicht">
-          <!-- Card 1 -->
-          <a class="card" href="#">
-            <div class="thumb" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="tagrow">
-                <span class="tag">Studio</span>
-                <span class="tag">Natuurinclusief</span>
-                <span class="tag">Marineterrein</span>
-              </div>
-              <h3 class="card-title">Greengym</h3>
-              <p class="card-desc">
-                Sportblok verdiept in maaiveld met toegankelijk natuurdak en
-                heldere constructielogica.
-              </p>
-              <div class="card-footer">
-                <span class="meta-small">2025–2026 · Ontwerp</span>
-                <span class="arrow"
-                  >Bekijk <span aria-hidden="true">→</span></span
-                >
-              </div>
+      <!-- PROJECT GRID -->
+      <section id="projecten" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="stack">
+              <h2 class="h2">Geselecteerde projecten</h2>
+              <p class="muted">Klik door voor proces, tekeningen en output.</p>
             </div>
-          </a>
+          </div>
 
-          <!-- Card 2 -->
-          <a class="card" href="#">
-            <div class="thumb" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="tagrow">
-                <span class="tag">Concept</span>
-                <span class="tag">Beton / hout</span>
-                <span class="tag">Landschap</span>
+          <div class="grid grid--3 arch-grid">
+            <!-- Card -->
+            <a
+              class="card card--link arch-card stack"
+              href="/architecture/projects/mixed-use.html"
+            >
+              <div class="arch-thumb" aria-hidden="true">
+                <img src="../assets/img/mixed-use/hero.webp" />
               </div>
-              <h3 class="card-title">Centrum voor Bezinning</h3>
-              <p class="card-desc">
-                Ruimtelijke sequentie: entree op de piek, afdaling naar kamers
-                met oplopende helderheid.
-              </p>
-              <div class="card-footer">
-                <span class="meta-small">2025 · Concept</span>
-                <span class="arrow"
-                  >Bekijk <span aria-hidden="true">→</span></span
-                >
+              <div class="stack">
+                <h3 class="h3">Trion</h3>
+                <p class="muted">Mixed use gebouw</p>
+                <div class="cluster">
+                  <span class="pill">2024-2025</span>
+                  <span class="pill">Concept</span>
+                  <span class="pill">VO</span>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
 
-          <!-- Card 3 -->
-          <a class="card" href="#">
-            <div class="thumb" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="tagrow">
-                <span class="tag">Analyse</span>
-                <span class="tag">Stedenbouw</span>
-                <span class="tag">Amsterdam</span>
+            <a
+              class="card card--link arch-card stack wip is.disabled"
+              href="/architecture/projects/greengym/index.html"
+            >
+              <div class="arch-thumb" aria-hidden="true"></div>
+              <div class="stack">
+                <h3 class="h3">GreenGym</h3>
+                <p class="muted">Natuurinclusief sportgebouw + groendak.</p>
+                <div class="cluster">
+                  <span class="pill">2026</span>
+                  <span class="pill">Sport</span>
+                  <span class="pill">Detail</span>
+                </div>
               </div>
-              <h3 class="card-title">Piraeus — Research</h3>
-              <p class="card-desc">
-                Typologie, plattegrondlogica en gevelopbouw vertaald naar
-                heldere diagrammen en tekst.
-              </p>
-              <div class="card-footer">
-                <span class="meta-small">2025–2026 · Onderzoek</span>
-                <span class="arrow"
-                  >Bekijk <span aria-hidden="true">→</span></span
-                >
-              </div>
-            </div>
-          </a>
+            </a>
 
-          <!-- Card 4 -->
-          <a class="card" href="#">
-            <div class="thumb" aria-hidden="true"></div>
-            <div class="card-body">
-              <div class="tagrow">
-                <span class="tag">Herbestemmen</span>
-                <span class="tag">Detail</span>
-                <span class="tag">Context</span>
+            <a
+              class="card card--link arch-card stack wip is.disabled"
+              href="/architecture/projects/centrum.html"
+            >
+              <div class="arch-thumb" aria-hidden="true"></div>
+              <div class="stack">
+                <h3 class="h3">Centrum voor Bezinning</h3>
+                <p class="muted">Licht/donker, materialiteit, uitzicht.</p>
+                <div class="cluster">
+                  <span class="pill">2026</span>
+                  <span class="pill">Concept</span>
+                  <span class="pill">Ervaring</span>
+                </div>
               </div>
-              <h3 class="card-title">Herbestemming (selectie)</h3>
-              <p class="card-desc">
-                Interventies die leesbaar blijven: oud blijft oud, nieuw blijft
-                nieuw — maar klopt technisch.
-              </p>
-              <div class="card-footer">
-                <span class="meta-small">2025–2026 · Uitwerking</span>
-                <span class="arrow"
-                  >Bekijk <span aria-hidden="true">→</span></span
-                >
-              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS (optioneel maar handig voor stage) -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="stack">
+              <h2 class="h2">Skills</h2>
+              <p class="muted">Wat ik inzet in projecten.</p>
             </div>
-          </a>
-          <!-- Card 5 -->
-          <a class="card" href="projects/mixed-use.html">
-            <div class="thumb" aria-hidden="true">
-              <img
-                src="../assets/mixed-use/hero.jpg"
-                alt="Paviljoen - hero"
-                loading="lazy"
-                decoding="async"
-              />
+          </div>
+
+          <div class="grid grid--3">
+            <div class="card stack">
+              <h3 class="h3">Ontwerp</h3>
+              <p class="muted">Concept, massastudies, routing, narratief.</p>
             </div>
-            <div class="card-body">
-              <div class="tagrow">
-                <span class="tag">Herbestemmen</span>
-                <span class="tag">Detail</span>
-                <span class="tag">Context</span>
-              </div>
-              <h3 class="card-title">Paviljoen</h3>
-              <p class="card-desc">
-                Interventies die leesbaar blijven: oud blijft oud, nieuw blijft
-                nieuw — maar klopt technisch.
-              </p>
-              <div class="card-footer">
-                <span class="meta-small">2025–2026 · Uitwerking</span>
-                <span class="arrow"
-                  >Bekijk <span aria-hidden="true">→</span></span
-                >
-              </div>
+            <div class="card stack">
+              <h3 class="h3">Techniek</h3>
+              <p class="muted">Constructielogica, details, bouwbaarheid.</p>
             </div>
-          </a>
-        </section>
-      </div>
+            <div class="card stack">
+              <h3 class="h3">Presentatie</h3>
+              <p class="muted">Lay-outs, diagrammen, heldere boards.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <!-- <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="stack">
+              <h2 class="h2">Contact</h2>
+              <p class="muted">Stage / samenwerking: stuur me een bericht.</p>
+            </div>
+          </div>
+
+          <div class="grid grid--3">
+            <a class="card card--link stack" href="mailto:you@email.com">
+              <h3 class="h3">Mail</h3>
+              <p class="muted">you@email.com</p>
+              <span class="pill">Open →</span>
+            </a>
+
+            <a
+              class="card card--link stack"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3 class="h3">LinkedIn</h3>
+              <p class="muted">Connect / DM</p>
+              <span class="pill">Open →</span>
+            </a>
+
+            <a class="card card--link stack" href="/cv.pdf">
+              <h3 class="h3">CV</h3>
+              <p class="muted">Download</p>
+              <span class="pill">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section> -->
+
+      <footer class="footer section">
+        <div class="container footer__row">
+          <span class="muted">© <span id="y"></span> Mauro</span>
+          <a class="pill" href="#top">Back to top</a>
+        </div>
+      </footer>
     </main>
 
-    <footer>
-      <div class="wrap">
-        <div class="foot">
-          <div>© <span id="y"></span> Mauro — Architectuur</div>
-          <div class="mini-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">Behance</a>
-            <a href="#">Mail</a>
-            <a href="../garden/index.html">The Garden →</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="../js/app.js" defer></script>
-    <script src="../js/header.js" defer></script>
+    <script src="/js/header.js" defer></script>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

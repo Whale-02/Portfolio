@@ -1,23 +1,29 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!doctype html>
+<html lang="nl" data-realm="landing">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Mauro — Portfolio</title>
     <meta
       name="description"
-      content="Portfolio van Mauro: Architectuur en The Garden (games, foto, experiments)."
+      content="Portfolio van Mauro. Kies tussen Architectuur en The Garden."
     />
-    <meta name="theme-color" content="#0b0c0f" />
 
-    <link rel="icon" href="assets/img/ui/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/landing.css" />
-    <link rel="stylesheet" href="css/header.css" />
+    <!-- Core -->
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <!-- Page -->
+    <link rel="stylesheet" href="/css/pages/landing.css" />
   </head>
 
   <body>
+    <div class="topline" aria-hidden="true"></div>
+
+    <!-- NAV (shared) -->
     <header class="hud" data-header>
-      <!-- left: burger + brand -->
       <div class="hud__left">
         <button
           class="hud__burger"
@@ -32,26 +38,20 @@
 
         <a class="hud__brand" href="/index.html">
           <span class="hud__seed" aria-hidden="true"></span>
-          <span class="hud__brandText">The Garden</span>
+          <span class="hud__brandText">Mauro</span>
         </a>
       </div>
 
-      <!-- center: page anchors (optioneel per pagina) -->
       <nav class="hud__nav" aria-label="Snelnavigatie" data-nav>
-        <a href="#intro" class="hud__link">Intro</a>
-        <a href="#path" class="hud__link">Path</a>
-        <a href="#games" class="hud__link">Games</a>
-        <a href="#photo" class="hud__link">Foto</a>
-        <a href="#lab" class="hud__link">Lab</a>
-        <a href="#archive" class="hud__link">Archive</a>
+        <a href="#start" class="hud__link">Start</a>
+        <a href="#about" class="hud__link">About</a>
+        <a href="#contact" class="hud__link">Contact</a>
       </nav>
 
-      <!-- right: actions -->
       <div class="hud__right">
-        <!-- <a class="hud__pill" href="/architecture/index.html">Architectuur →</a> -->
+        <a class="hud__pill" href="/architecture/index.html">Architectuur →</a>
       </div>
 
-      <!-- Drawer menu -->
       <div class="drawer" id="drawer" data-drawer aria-hidden="true">
         <div class="drawer__backdrop" data-drawer-close></div>
 
@@ -60,6 +60,7 @@
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
+          tabindex="-1"
         >
           <div class="drawer__top">
             <div class="drawer__title">
@@ -81,7 +82,6 @@
           </div>
 
           <nav class="drawer__nav" aria-label="Main navigation">
-            <!-- Zet per pagina de juiste link op is-active -->
             <a class="drawer__link is-active" href="/index.html">
               <span class="drawer__icon" aria-hidden="true">◼︎</span>
               <span class="drawer__text">
@@ -107,13 +107,12 @@
             </a>
           </nav>
 
-          <!-- uitbreidbaar -->
           <div class="drawer__section">
-            <div class="drawer__sectionTitle">Later</div>
+            <div class="drawer__sectionTitle">Shortcuts</div>
             <a class="drawer__mini" href="/garden/index.html#archive"
               >→ Archive</a
             >
-            <a class="drawer__mini" href="/architecture/index.html#projects"
+            <a class="drawer__mini" href="/architecture/index.html#projecten"
               >→ Projecten</a
             >
           </div>
@@ -121,185 +120,150 @@
       </div>
     </header>
 
-    <div class="topline" aria-hidden="true"></div>
+    <!-- MAIN -->
+    <main id="start" class="page">
+      <section class="hero section">
+        <div class="container">
+          <div class="stack hero__intro">
+            <!-- <p class="kicker">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Twee werelden · één portfolio</span>
+            </p> -->
 
-    <main class="main">
-      <!-- HERO -->
-      <section class="hero wrap" id="top">
-        <p class="kicker">
-          <span class="dot" aria-hidden="true"></span>
-          twee werelden / één portfolio
-        </p>
+            <h1 class="h1"></h1>
+            <p class="lead"></p>
+          </div>
 
-        <h1 class="h1">Kies je route.</h1>
-        <p class="lead">
-          Architectuur is strak en inhoudelijk. The Garden is een immersive
-          playground voor alles daarbuiten.
-        </p>
-
-        <div class="gate" id="work">
-          <!-- ARCHITECTURE -->
-          <a class="card card--arch" href="architecture/index.html" data-reveal>
-            <div class="card__bg" aria-hidden="true"></div>
-
-            <div class="card__head">
-              <span class="chip">01</span>
-              <span class="label">Architectuur</span>
-            </div>
-
-            <h2 class="card__title">Strak / zwart-wit / gradient accent</h2>
-            <p class="card__text">
-              Selectie van projecten, research en uitwerking. Duidelijke
-              structuur, minimale ruis.
-            </p>
-
-            <div class="card__foot">
-              <span class="meta">Studio · Analyse · Detail</span>
-              <span class="go">Open <b aria-hidden="true">→</b></span>
-            </div>
-          </a>
-
-          <!-- GARDEN -->
-          <a class="card card--garden" href="garden/index.html" data-reveal>
-            <div class="card__bg" aria-hidden="true"></div>
-
-            <div class="card__head">
-              <span class="chip">02</span>
-              <span class="label">The Garden</span>
-            </div>
-
-            <h2 class="card__title">Immersive / speels / natuurlijk</h2>
-            <p class="card__text">
-              Games, fotografie, UI, experiments. Meer gevoel, meer vrijheid,
-              nog steeds curated.
-            </p>
-
-            <div class="card__foot">
-              <span class="meta">Games · Foto · Lab</span>
-              <span class="go">Enter <b aria-hidden="true">→</b></span>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="section about">
-        <div class="wrap">
-          <header class="section-head" data-reveal>
-            <h2 class="section-title">Over mij</h2>
-            <p class="section-sub">
-              Bouwkunde student met focus op ontwerp, ruimtelijke logica en
-              technische uitwerking.
-            </p>
-          </header>
-
-          <div class="about-grid">
-            <!-- LINKS: TEKST -->
-            <div class="about-text" data-reveal>
-              <p class="about-lead">
-                Ik ben Mauro, derdejaars Bouwkunde student aan de Hogeschool van
-                Amsterdam. In mijn werk zoek ik de balans tussen een helder
-                concept en een technisch kloppende uitwerking.
-              </p>
-
-              <p>
-                Mijn interesse ligt bij projecten waar architectuur, constructie
-                en gebruik samenkomen. Ik werk graag vanuit een duidelijke
-                ruimtelijke sequentie en vertaal dit naar leesbare
-                plattegronden, doorsnedes en details.
-              </p>
-
-              <p>
-                Naast architectuur werk ik aan games, tools en visuele
-                experimenten. Deze projecten zijn gebundeld in
-                <strong>The Garden</strong> en vormen mijn creatieve
-                speelruimte.
-              </p>
-            </div>
-
-            <!-- RECHTS: KERNINFO -->
-            <aside class="about-facts" data-reveal>
-              <dl class="facts-list">
-                <div class="fact">
-                  <dt>Naam</dt>
-                  <dd>Mauro van der Zwet</dd>
+          <div class="gate">
+            <a
+              class="gate-card gate-card--arch"
+              href="/architecture/index.html"
+            >
+              <div class="gate-card__inner">
+                <div class="gate-card__top">
+                  <h2 class="h2">Architectuur</h2>
                 </div>
+                <p class="muted">
+                  Geselecteerde projecten met focus op concept, logica en
+                  detail.
+                </p>
+                <span class="btn btn--accent">Open →</span>
+              </div>
+            </a>
 
-                <div class="fact">
-                  <dt>Opleiding</dt>
-                  <dd>Bouwkunde — Hogeschool van Amsterdam</dd>
+            <a class="gate-card gate-card--garden" href="/garden/index.html">
+              <div class="gate-card__inner">
+                <div class="gate-card__top">
+                  <h2 class="h2">The Garden</h2>
                 </div>
-
-                <div class="fact">
-                  <dt>Jaar</dt>
-                  <dd>3e leerjaar</dd>
-                </div>
-
-                <div class="fact">
-                  <dt>Focus</dt>
-                  <dd>Ontwerp · Constructie · Uitwerking</dd>
-                </div>
-
-                <div class="fact">
-                  <dt>Tools</dt>
-                  <dd>SketchUp · Layout · Rhino · Affinity</dd>
-                </div>
-
-                <div class="fact">
-                  <dt>Interesse</dt>
-                  <dd>Natuurinclusief · Herbestemming · Detail</dd>
-                </div>
-              </dl>
-            </aside>
+                <p class="muted">
+                  Immersive hub: games, foto, experiments, archive.
+                </p>
+                <span class="btn btn--accent">Enter →</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section wrap" id="contact">
-        <div class="section__head">
-          <h2 class="h2">Contact</h2>
-          <p class="sub">Kort en praktisch: mail of socials.</p>
-        </div>
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="stack">
+              <h2 class="h2">About</h2>
+              <p class="muted">
+                Bouwkunde (HvA), focus op ontwerp + techniek. 
+              </p>
+            </div>
+          </div>
 
-        <div class="contact">
-          <a
-            class="contact__item"
-            href="mailto:mail@maurovanderzwet.nl"
-            data-reveal
-          >
-            <span class="contact__k">Mail</span>
-            <span class="contact__v">mail@maurovanderzwet.nl</span>
-            <span class="contact__go" aria-hidden="true">→</span>
-          </a>
+          <div class="split">
+            <div class="stack">
+              <h3 class="h3">Wat je hier ziet</h3>
+              <ul class="list">
+                <li>Concept & ruimtelijke logica</li>
+                <li>Detaillering en constructie-denken</li>
+                <li>Presentatie zonder ruis</li>
+              </ul>
+            </div>
 
-          <a class="contact__item" href="#" data-reveal>
-            <span class="contact__k">LinkedIn</span>
-            <span class="contact__v">/in/…</span>
-            <span class="contact__go" aria-hidden="true">→</span>
-          </a>
-
-          <a class="contact__item" href="#" data-reveal>
-            <span class="contact__k">Instagram</span>
-            <span class="contact__v">@…</span>
-            <span class="contact__go" aria-hidden="true">→</span>
-          </a>
+            <div class="card stack">
+              <h3 class="h3">Facts</h3>
+              <div class="facts">
+                <div class="fact">
+                  <div class="fact__k">Studie</div>
+                  <div class="fact__v">Bouwkunde HvA</div>
+                </div>
+                <div class="fact">
+                  <div class="fact__k">Jaar</div>
+                  <div class="fact__v">3e jaar</div>
+                </div>
+                <div class="fact">
+                  <div class="fact__k">Focus</div>
+                  <div class="fact__v">Ontwerp + techniek</div>
+                </div>
+                <div class="fact">
+                  <div class="fact__k">Tools</div>
+                  <div class="fact__v">SketchUp / Rhino / Layout</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section id="contact" class="section wip is.disabled">
+        <div class="container">
+          <div class="section-head">
+            <div class="stack">
+              <h2 class="h2">Contact</h2>
+              <p class="muted">Kortste route naar mij.</p>
+            </div>
+          </div>
+
+          <div class="grid grid--3">
+            <a class="card card--link stack" href="mailto:you@email.com">
+              <h3 class="h3">Mail</h3>
+              <p class="muted">you@email.com</p>
+              <span class="pill">Open →</span>
+            </a>
+
+            <a
+              class="card card--link stack"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3 class="h3">LinkedIn</h3>
+              <p class="muted">Connect / DM</p>
+              <span class="pill">Open →</span>
+            </a>
+
+            <a
+              class="card card--link stack"
+              href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h3 class="h3">GitHub</h3>
+              <p class="muted">Code / experiments</p>
+              <span class="pill">Open →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer section">
+        <div class="container footer__row">
+          <span class="muted">© <span id="y"></span> Mauro</span>
+          <a class="pill" href="#start">Back to top</a>
+        </div>
+      </footer>
     </main>
 
-    <footer class="ftr">
-      <div class="wrap ftr__row">
-        <p>© <span id="y"></span> Mauro</p>
-        <div class="ftr__links">
-          <a href="#top">Back to top</a>
-          <a href="architecture/index.html">Architectuur</a>
-          <a href="garden/index.html">The Garden</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/landing.js" defer></script>
-    <script src="js/header.js" defer></script>
+    <script src="/js/header.js" defer></script>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

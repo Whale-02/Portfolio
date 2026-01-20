@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!doctype html>
+<html lang="nl" data-realm="garden">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -8,15 +8,25 @@
       name="description"
       content="The Garden — immersive playground van Mauro: games, foto, experiments."
     />
-    <link rel="stylesheet" href="../css/garden.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/3d-models.css" />
+
+    <!-- Core -->
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <!-- Page -->
+    <link rel="stylesheet" href="/css/pages/garden.css" />
+
+    <!-- Vendor -->
+    <link rel="stylesheet" href="/css/vendor/3d-models.css" />
   </head>
 
   <body>
+    <div class="topline" aria-hidden="true"></div>
+
     <!-- Fixed top HUD -->
     <header class="hud" data-header>
-      <!-- left: burger + brand -->
       <div class="hud__left">
         <button
           class="hud__burger"
@@ -35,7 +45,6 @@
         </a>
       </div>
 
-      <!-- center: page anchors -->
       <nav class="hud__nav" aria-label="Snelnavigatie" data-nav>
         <a href="#intro" class="hud__link">Intro</a>
         <a href="#path" class="hud__link">Path</a>
@@ -45,12 +54,10 @@
         <a href="#archive" class="hud__link">Archive</a>
       </nav>
 
-      <!-- right: actions -->
       <div class="hud__right">
         <a class="hud__pill" href="/architecture/index.html">Architectuur →</a>
       </div>
 
-      <!-- Drawer -->
       <div class="drawer" id="drawer" data-drawer aria-hidden="true">
         <div class="drawer__backdrop" data-drawer-close></div>
 
@@ -80,10 +87,8 @@
             </button>
           </div>
 
-          <!-- content grid: visual + nav -->
           <div class="drawer__content">
             <div class="drawer__visual">
-              <!-- Foto / overlay / whatever -->
               <img src="/assets/nav/garden.jpg" alt="" loading="lazy" />
               <div class="drawer__visualOverlay">
                 <div class="drawer__visualTitle">The Garden</div>
@@ -92,7 +97,6 @@
             </div>
 
             <nav class="drawer__nav" aria-label="Main navigation">
-              <!-- Zet per pagina de juiste link op is-active -->
               <a class="drawer__link" href="/index.html">
                 <span class="drawer__icon" aria-hidden="true">◼︎</span>
                 <span class="drawer__text">
@@ -148,26 +152,22 @@
       <section id="intro" class="scene scene--intro" aria-label="Intro">
         <div class="scene__bg" aria-hidden="true"></div>
 
-        <div class="scene__content wrap">
+        <div class="scene__content container">
           <p class="kicker">
             <span class="kicker__spark" aria-hidden="true"></span>
             curated chaos / side quests / things that grow
           </p>
           <h1 class="title__glass">The Garden</h1>
-          <span class="title__sub">Immersive playground</span>
+          <span class="title__sub">A place where ideas grow.</span>
           <p class="lead">
-            Alles wat buiten school om ontstaat: games, fotografie, UI,
-            experiments.
+            Er wordt momenteel hard gewerkt aan deze sectie. Kom later terug voor
+            de volledige ervaring!
           </p>
 
           <div class="cta">
             <a class="btn btn--accent" href="#path">Start the walk</a>
             <a class="btn" href="#archive">Jump to archive</a>
           </div>
-
-          <!-- <p class="hint">
-            Scroll / trackpad — elke sectie “snapt” fullscreen.
-          </p> -->
         </div>
       </section>
 
@@ -175,12 +175,12 @@
       <section id="path" class="scene scene--path" aria-label="Path">
         <div class="scene__bg scene__bg--parallax" aria-hidden="true"></div>
 
-        <div class="scene__content wrap split">
+        <div class="scene__content container split">
           <h2 class="heading">Choose a subject.</h2>
           <p class="lead small">
-            Snelle routes. Later maak je hier echte pages van. Nu is het een
-            immersive index.
+            
           </p>
+
           <div class="split__left">
             <div class="path">
               <a class="path__card" href="#games">
@@ -189,24 +189,22 @@
                 <span class="path__meta">Unity / Web / Prototypes</span>
               </a>
 
-              <a class="path__card" href="#photo">
+              <a class="path__card wip " href="#photo">
                 <span class="path__tag">02</span>
                 <span class="path__title">Fotografie</span>
                 <span class="path__meta">Series / Walks / Details</span>
               </a>
 
-              <a class="path__card" href="#lab">
+              <a class="path__card wip" href="#lab">
                 <span class="path__tag">03</span>
                 <span class="path__title">Lab</span>
                 <span class="path__meta">UI / 3D / Experiments</span>
               </a>
 
-              <a class="path__card" href="#archive">
+              <a class="path__card wip" href="#archive">
                 <span class="path__tag">04</span>
                 <span class="path__title">Archive</span>
-                <div class="path__content">
-                  <span class="path__meta">Alles bij elkaar</span>
-                </div>
+                <span class="path__meta">Alles bij elkaar</span>
               </a>
             </div>
           </div>
@@ -214,11 +212,10 @@
           <div class="split__right">
             <div class="poster">
               <div class="poster__frame">
-                <!-- vervang door jouw visuals -->
                 <div class="poster__img" aria-hidden="true"></div>
               </div>
               <p class="poster__cap">
-                Tip: zet hier een moving/stills collage (later eventueel video).
+                
               </p>
             </div>
           </div>
@@ -229,7 +226,7 @@
       <section id="games" class="scene scene--cases" aria-label="Games">
         <div class="scene__bg" aria-hidden="true"></div>
 
-        <div class="scene__content wrap">
+        <div class="scene__content container">
           <div class="scene__head">
             <h2 class="heading">Games</h2>
             <p class="lead small">
@@ -269,10 +266,6 @@
               </div>
             </a>
           </div>
-
-          <!-- <div class="scene__footer">
-            <a class="btn btn--ghost" href="#photo">Next: Fotografie →</a>
-          </div> -->
         </div>
       </section>
 
@@ -280,9 +273,9 @@
       <section id="photo" class="scene scene--photo" aria-label="Fotografie">
         <div class="scene__bg scene__bg--parallax" aria-hidden="true"></div>
 
-        <div class="scene__content wrap">
+        <div class="scene__content container">
           <div class="scene__head">
-            <h2 class="heading">Photografy</h2>
+            <h2 class="heading">Photography</h2>
             <p class="lead small">Series > losse shots. Laat ritme zien.</p>
           </div>
 
@@ -303,10 +296,6 @@
               <span class="shot__label">People</span>
             </a>
           </div>
-
-          <!-- <div class="scene__footer">
-            <a class="btn btn--ghost" href="#lab">Next: Lab →</a>
-          </div> -->
         </div>
       </section>
 
@@ -314,12 +303,10 @@
       <section id="lab" class="scene scene--lab" aria-label="Lab">
         <div class="scene__bg" aria-hidden="true"></div>
 
-        <div class="scene__content wrap split">
+        <div class="scene__content container split">
           <h2 class="heading">Lab</h2>
-          <p class="lead small">
-            UI, 3D, tools, experiments.
-            <!-- Dit is waar je “speelse” identiteit hard scoort. -->
-          </p>
+          <p class="lead small">UI, 3D, tools, experiments.</p>
+
           <div class="split__left">
             <div class="stack">
               <a class="stack__item" href="#">
@@ -342,14 +329,12 @@
 
           <div class="split__right">
             <div class="ambient">
-              <!-- <div class="ambient__orb"></div>
-              <div class="ambient__orb--2"></div>
-              <div class="ambient__orb--3"></div> -->
               <div class="view__model">
                 <div id="displayPoster" class="ambient__model">
+                  <div class="modelbox">
                   <model-viewer
                     canvas-id="plantViewer"
-                    src="../assets/models/plant.glb"
+                    src="/assets/models/plant.glb"
                     camera-controls
                     tone-mapping="neutral"
                     poster="poster.webp"
@@ -361,6 +346,8 @@
                       <div class="update-bar"></div>
                     </div>
                   </model-viewer>
+                </div>
+                  </div>
                 </div>
               </div>
 
@@ -374,7 +361,7 @@
       <section id="archive" class="scene scene--archive" aria-label="Archive">
         <div class="scene__bg" aria-hidden="true"></div>
 
-        <div class="scene__content wrap">
+        <div class="scene__content container">
           <div class="scene__head">
             <h2 class="heading">Archive</h2>
             <p class="lead small">
@@ -413,25 +400,28 @@
           </div>
         </div>
       </section>
+      <footer class="garden-footer" aria-label="Footer">
+        <div class="container footer__row">
+          <span class="muted">© <span id="y"></span> Mauro — The Garden</span>
+          <div class="cluster">
+            <a class="pill" href="#">Instagram</a>
+            <a class="pill" href="#">Itch.io</a>
+            <a class="pill" href="#">GitHub</a>
+            <a class="pill" href="#">Mail</a>
+          </div>
+        </div>
+      </footer>
+      <div class="snap-end" aria-hidden="true"></div>
     </main>
 
-    <footer class="end">
-      <div class="wrap end__row">
-        <p>© <span id="y"></span> Mauro — The Garden</p>
-        <div class="end__links">
-          <a href="#">Instagram</a>
-          <a href="#">Itch.io</a>
-          <a href="#">GitHub</a>
-          <a href="#">Mail</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="../js/app.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="/js/app.js" defer></script>
+    <script src="/js/header.js" defer></script>
     <script
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
     ></script>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

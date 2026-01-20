@@ -1,216 +1,250 @@
-<section id="project-greengym" class="project" aria-label="Project: Greengym">
-  <!-- BLOCK 1: HERO (title + hero image) -->
-  <header class="p-hero" data-reveal>
-    <div class="p-hero__text">
-      <p class="p-kicker">Studio · Marineterrein · 2025–2026</p>
-      <h2 class="p-title">Greengym</h2>
-      <p class="p-lead">
-        Sportgebouw met natuurinclusieve strategieën, verdiept volume en
-        toegankelijk groendak.
-      </p>
+<!doctype html>
+<html lang="nl" data-realm="arch">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Centrum voor Bezinning — Ripple</title>
+    <meta
+      name="description"
+      content="Centrum voor Bezinning — Ripple: een ruimtelijke afdaling van licht naar donker met materialiteit en uitzicht als narratief."
+    />
 
-      <div class="p-tags">
-        <span class="tag">Concept</span>
-        <span class="tag">Constructie</span>
-        <span class="tag">Klimaat</span>
+    <!-- Core -->
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <!-- Project blocks -->
+    <link rel="stylesheet" href="/css/pages/project.css" />
+  </head>
+
+  <body>
+    <div class="topline" aria-hidden="true"></div>
+
+    <!-- NAV (shared) -->
+    <header class="hud" data-header>
+      <div class="hud__left">
+        <button
+          class="hud__burger"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+          data-drawer-open
+        >
+          <span class="hud__burgerLines" aria-hidden="true"></span>
+        </button>
+
+        <a class="hud__brand" href="/index.html">
+          <span class="hud__seed" aria-hidden="true"></span>
+          <span class="hud__brandText">Mauro</span>
+        </a>
       </div>
-    </div>
 
-    <div class="p-hero__media">
-      <!-- Klikbaar (lightbox) -->
-      <a
-        class="media media--hero"
-        href="assets/img/architecture/projects/greengym/hero.jpg"
-        data-lightbox
-        data-alt="Greengym hero"
-        data-caption="Hero — totaalbeeld / key render"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/hero.jpg"
-          alt="Greengym hero"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </header>
+      <nav class="hud__nav" aria-label="Project navigation" data-nav>
+        <a href="#overview" class="hud__link">Overview</a>
+        <a href="#process" class="hud__link">Process</a>
+        <a href="#output" class="hud__link">Output</a>
+        <a href="#reflection" class="hud__link">Reflection</a>
+      </nav>
 
-  <!-- BLOCK 2: CONTEXT (2-column text) -->
-  <div class="p-block p-context" data-reveal>
-    <div>
-      <h3 class="p-h">Context</h3>
-      <p class="p-t">
-        Korte context: locatie, doelgroep, thema, randvoorwaarden. 4–6 zinnen
-        max.
-      </p>
-    </div>
-    <div>
-      <h3 class="p-h">Vraag / opdracht</h3>
-      <p class="p-t">
-        Wat moest je oplossen? Wat was de kernvraag? Houd het scherp en
-        zakelijk.
-      </p>
-    </div>
-  </div>
-
-  <!-- BLOCK 3: KEY IMAGE + CAPTION (full width) -->
-  <div class="p-block p-full" data-reveal>
-    <a
-      class="media media--full"
-      href="assets/img/architecture/projects/greengym/01.jpg"
-      data-lightbox
-      data-alt="Greengym key diagram"
-      data-caption="Key diagram — massa / routing / dak"
-    >
-      <img
-        src="assets/img/architecture/projects/greengym/01.jpg"
-        alt="Greengym key diagram"
-        loading="lazy"
-      />
-    </a>
-    <p class="p-cap">
-      Caption: wat zien we en waarom is dit belangrijk? 1 zin.
-    </p>
-  </div>
-
-  <!-- BLOCK 4: SPLIT (image left, text right) -->
-  <div class="p-block p-split" data-reveal>
-    <a
-      class="media media--split"
-      href="assets/img/architecture/projects/greengym/02.jpg"
-      data-lightbox
-      data-alt="Greengym section"
-      data-caption="Doorsnede — relatie maaiveld / sportzaal / dak"
-    >
-      <img
-        src="assets/img/architecture/projects/greengym/02.jpg"
-        alt="Greengym section"
-        loading="lazy"
-      />
-    </a>
-    <div class="p-split__text">
-      <h3 class="p-h">Ruimtelijke logica</h3>
-      <p class="p-t">
-        Leg de sequentie uit: entree → routing → hoofdruimte → secundaire
-        ruimtes. Max 8–10 regels.
-      </p>
-      <ul class="p-list">
-        <li>1 kernpunt</li>
-        <li>2 kernpunt</li>
-        <li>3 kernpunt</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- BLOCK 5: GRID GALLERY (2–4 images) -->
-  <div class="p-block p-gallery" data-reveal>
-    <h3 class="p-h">Galerij</h3>
-    <div class="gallery">
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/03.jpg"
-        data-lightbox
-        data-alt="Image 03"
-        data-caption="Gevel / materialiteit"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/03.jpg"
-          alt="Image 03"
-          loading="lazy"
-        />
-      </a>
-
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/04.jpg"
-        data-lightbox
-        data-alt="Image 04"
-        data-caption="Plattegrond"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/04.jpg"
-          alt="Image 04"
-          loading="lazy"
-        />
-      </a>
-
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/05.jpg"
-        data-lightbox
-        data-alt="Image 05"
-        data-caption="Detail / knoop"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/05.jpg"
-          alt="Image 05"
-          loading="lazy"
-        />
-      </a>
-
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/06.jpg"
-        data-lightbox
-        data-alt="Image 06"
-        data-caption="Sfeer / render"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/06.jpg"
-          alt="Image 06"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </div>
-
-  <!-- BLOCK 6: METRICS / QUICK FACTS -->
-  <div class="p-block p-facts" data-reveal>
-    <h3 class="p-h">Quick facts</h3>
-    <dl class="facts">
-      <div class="fact">
-        <dt>Rol</dt>
-        <dd>Ontwerp + uitwerking</dd>
+      <div class="hud__right">
+        <a class="hud__pill" href="/architecture/index.html">Architectuur →</a>
       </div>
-      <div class="fact">
-        <dt>Focus</dt>
-        <dd>Natuurinclusief + constructie</dd>
-      </div>
-      <div class="fact">
-        <dt>Tools</dt>
-        <dd>SketchUp / Layout / Rhino</dd>
-      </div>
-      <div class="fact">
-        <dt>Output</dt>
-        <dd>Plattegronden · Doorsnedes · Details</dd>
-      </div>
-    </dl>
-  </div>
 
-  <!-- BLOCK 7: PROCESS (steps) -->
-  <div class="p-block p-steps" data-reveal>
-    <h3 class="p-h">Proces</h3>
-    <ol class="steps">
-      <li><strong>Analyse</strong> — site, zon, wind, routing, programma</li>
-      <li><strong>Concept</strong> — massa + dakstrategie + sequentie</li>
-      <li><strong>Uitwerking</strong> — constructie, schil, details</li>
-      <li><strong>Resultaat</strong> — presentatie + reflectie</li>
-    </ol>
-  </div>
+      <div class="drawer" id="drawer" data-drawer aria-hidden="true">
+        <div class="drawer__backdrop" data-drawer-close></div>
 
-  <!-- BLOCK 8: REFLECTION + NEXT -->
-  <footer class="p-block p-end" data-reveal>
-    <div class="p-end__text">
-      <h3 class="p-h">Reflectie</h3>
-      <p class="p-t">
-        3–5 zinnen: wat werkte, wat zou je anders doen, wat heb je geleerd.
-      </p>
-    </div>
+        <aside
+          class="drawer__panel"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Menu"
+          tabindex="-1"
+        >
+          <div class="drawer__top">
+            <div class="drawer__title">
+              <span class="drawer__seed" aria-hidden="true"></span>
+              <div>
+                <div class="drawer__name">Navigate</div>
+                <div class="drawer__meta">Project</div>
+              </div>
+            </div>
 
-    <div class="p-end__actions">
-      <a class="btn" href="#projects">Terug naar overzicht</a>
-      <a class="btn btn--accent" href="#project-bezinning"
-        >Volgende project →</a
-      >
-    </div>
-  </footer>
-</section>
+            <button
+              class="drawer__close"
+              type="button"
+              aria-label="Close menu"
+              data-drawer-close
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="drawer__content">
+            <nav class="drawer__nav" aria-label="Main navigation">
+              <a class="drawer__link" href="/index.html">
+                <span class="drawer__icon" aria-hidden="true">◼︎</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">Main</span>
+                  <span class="drawer__desc">Landing / keuze</span>
+                </span>
+              </a>
+
+              <a class="drawer__link is-active" href="/architecture/index.html">
+                <span class="drawer__icon" aria-hidden="true">▦</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">Architectuur</span>
+                  <span class="drawer__desc">Projecten · overzicht</span>
+                </span>
+              </a>
+
+              <a class="drawer__mini" href="/architecture/index.html#projecten"
+                >→ Projecten</a
+              >
+
+              <a class="drawer__link" href="/garden/index.html">
+                <span class="drawer__icon" aria-hidden="true">✳︎</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">The Garden</span>
+                  <span class="drawer__desc">Immersive · games · foto</span>
+                </span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main class="page" id="top">
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="container hero__inner">
+          <p class="hero__eyebrow">Architectuur · Concept</p>
+          <h1 class="hero__title">Centrum voor Bezinning — Ripple</h1>
+
+          <p class="hero__desc">
+            Een gebouw als afdaling: van licht naar donker, van ruw naar verfijnd.
+            Drie ruimtes kaderen het landschap in oplopende helderheid, terwijl
+            materialiteit en akoestiek de reflectie sturen.
+          </p>
+
+          <div class="hero__meta">
+            <span class="tag">Locatie: Lago Maggiore</span>
+            <span class="tag">Focus: Ruimtelijke ervaring</span>
+            <span class="tag">Materialen: Beton · steen · hout</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERVIEW (split) -->
+      <section id="overview" class="section split">
+        <div class="container split__inner">
+          <div class="split__col split__col--left">
+            <h2 class="h2">Overview</h2>
+            <p class="muted">
+              De entree ligt op de piek. Daarna daal je af in een smalle, donkere
+              route. Elke kamer opent een nieuw uitzicht en een nieuwe tactiele
+              laag: ruw beton en steen → gepolijst beton met water → hout en
+              panoramaraam.
+            </p>
+
+            <ul class="list">
+              <li>Overgang licht/donker als narratief</li>
+              <li>Materiaal + akoestiek per kamer</li>
+              <li>Ramen: spleet → kader → panorama</li>
+              <li>Interacties: water / schaduw / geluid</li>
+            </ul>
+          </div>
+
+          <div class="split__col split__col--right">
+            <div class="media">
+              <!-- vervang door je hero/section image -->
+              <!-- <img src="/assets/img/projects/ripple/hero.jpg" alt="..." /> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS (photo grid) -->
+      <section id="process" class="section photo-grid">
+        <div class="container">
+          <h2 class="h2">Process</h2>
+          <p class="muted">
+            Conceptschetsen, ruimtelijke route, doorsnedes en material studies.
+          </p>
+
+          <div class="grid grid--3">
+            <figure class="photo">
+              <!-- <img src="/assets/img/projects/ripple/process-01.jpg" alt="..." /> -->
+            </figure>
+            <figure class="photo"></figure>
+            <figure class="photo"></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTPUT (photo grid variant) -->
+      <section id="output" class="section photo-grid">
+        <div class="container">
+          <h2 class="h2">Output</h2>
+          <p class="muted">De kernbeelden die het ontwerp dragen.</p>
+
+          <div class="grid grid--2">
+            <figure class="photo"></figure>
+            <figure class="photo"></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFLECTION -->
+      <section id="reflection" class="section reflection">
+        <div class="container reflection__inner">
+          <h2 class="h2">Reflection</h2>
+
+          <div class="reflection__grid">
+            <div class="panel">
+              <h3 class="h3">What worked</h3>
+              <ul class="list">
+                <li>Route en lichtopbouw maken het verhaal leesbaar.</li>
+                <li>Materialiteit stuurt tempo en sfeer per ruimte.</li>
+                <li>Uitzicht-progressie werkt als beloning.</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="h3">What I’d improve</h3>
+              <ul class="list">
+                <li>Meer precisie in constructieve logica bij inbouw bergwand.</li>
+                <li>Overgangen tussen kamers (drempel/geluid) sterker detailleren.</li>
+                <li>Daglichtregeling: subtieler, minder “hard” contrast.</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="h3">Next steps</h3>
+              <ul class="list">
+                <li>1:50 detail van entree + lichtspleten.</li>
+                <li>Materiaaltests: betonafwerking + houten lamellen.</li>
+                <li>Atmosphere renders per kamer.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer section">
+        <div class="container footer__row">
+          <span class="muted">© <span id="y"></span> Mauro</span>
+          <a class="pill" href="#top">Back to top</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="/js/header.js" defer></script>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

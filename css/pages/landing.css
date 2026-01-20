@@ -1,0 +1,44 @@
+.hero__intro { margin-bottom: var(--gap); }
+
+.gate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  margin-top: 18px;
+}
+@media (max-width: 900px) { .gate { grid-template-columns: 1fr; } }
+
+.gate-card {
+  display: block;
+  border-radius: calc(var(--r) + 10px);
+  border: 1px solid var(--line);
+  background: rgba(15, 17, 23, 0.55);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: 200ms ease;
+  min-height: 220px;
+}
+.gate-card:hover { transform: translateY(-3px); border-color: rgba(245, 246, 248, 0.2); }
+
+.gate-card__inner {
+  padding: clamp(16px, 2.4vw, 26px);
+  display: grid;
+  gap: 12px;
+}
+
+.gate-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gate-card--arch::before,
+.gate-card--garden::before {
+  content: "";
+  display: block;
+  height: 3px;
+  opacity: 0.95;
+}
+.gate-card--arch::before { background: var(--grad-arch); }
+.gate-card--garden::before { background: var(--grad-garden); }

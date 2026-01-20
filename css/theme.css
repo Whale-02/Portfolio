@@ -1,0 +1,93 @@
+:root {
+  --bg: #0b0c0f;
+  --panel: rgba(15, 17, 23, 0.62);
+  --text: rgba(245, 246, 248, 0.92);
+  --muted: rgba(245, 246, 248, 0.72);
+  --line: rgba(245, 246, 248, 0.12);
+
+  --a1: #6ee7ff;
+  --a2: #b48cff;
+  --a3: #58ffa6;
+  --grad-arch: linear-gradient(90deg, var(--a1), var(--a2), var(--a3));
+
+  --g1: #6ee7b7;
+  --g2: #66d7ff;
+  --g3: #d7a8ff;
+  --grad-garden: linear-gradient(110deg, var(--g1), var(--g2), var(--g3));
+
+  --container: 1120px;
+  --pad: clamp(16px, 2.3vw, 26px);
+  --gap: clamp(14px, 2vw, 22px);
+  --r: 18px;
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+
+  /* typography */
+  --font-body:
+    ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --font-head: var(--font-body);
+
+  
+
+  --h1: clamp(28px, 4.4vw, 44px);
+  --h2: clamp(18px, 2.2vw, 22px);
+  --h3: 16px;
+  --p: 15px;
+
+  /* shared accent for landing */
+  --accent: var(--grad-arch);
+
+  --wip: #f5c400;
+  --wip-bg: #f5c4007e;
+  --wip-content: "Work in progress";
+
+  --wip-g: #6ee7b7;
+  --wip-g-bg: #6ee7b77e;
+  --wip-content-g: "Idea is still growing";
+
+  --wip-a: #66d7ff;
+  --wip-a-bg: #66d7ff7e;
+  --wip-content-a: "Work in progress";
+
+}
+
+/* realm overrides later:
+   [data-realm="arch"] { ... }
+   [data-realm="garden"] { ... } */
+
+[data-realm="arch"] {
+  --bg: #0b0c0f;
+  --panel: rgba(55, 57, 64, 0.62);
+  --line: rgba(106, 106, 106, 0.12);
+  --accent: var(--grad-arch);
+  --wip: var(--wip-a);
+  --wip-bg: var(--wip-a-bg);
+  --wip-content: var(--wip-content-a);
+}
+
+[data-realm="garden"] {
+  --accent: var(--grad-garden);
+  --panel: rgba(15, 17, 23, 0.55);
+  --line: rgba(245, 246, 248, 0.14);
+  --font-head: "Lostar", var(--font-body);
+  --wip: var(--wip-g);
+--wip-bg: var(--wip-g-bg);
+    --wip-content: var(--wip-content-g);
+}
+
+.wip[data-domain="arch"]::before{
+  content:"Architecture — WIP";
+}
+
+.wip[data-domain="garden"]::before{
+  content:"The Garden — WIP";
+}
+
+
+@font-face {
+    font-family: "Lostar";
+    src: url('/assets/fonts/Lostar.ttf') ;
+    font-size: 126px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    backdrop-filter: blur(10px);
+  }

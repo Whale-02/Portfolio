@@ -1,226 +1,211 @@
-<section id="project-mixed-use" class="project" aria-label="Project: Mixed-use">
+<!doctype html>
+<html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project: Mixed use</title>
-    <meta
-      name="description"
-      content="Projectpagina voor het Mixed-use project van Mauro."
-    />
-    <link rel="stylesheet" href="../../css/template.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project title</title>
+    <meta name="description" content="Short project description." />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <link rel="stylesheet" href="/css/pages/projects.css" />
+
+    <!-- Fonts (optional) -->
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
   </head>
-  <!-- BLOCK 1: HERO (title + hero image) -->
-  <header class="p-hero" data-reveal>
-    <div class="p-hero__text">
-      <p class="p-kicker">Studio · Marineterrein · 2025–2026</p>
-      <h2 class="p-title">Greengym</h2>
-      <p class="p-lead">
-        Sportgebouw met natuurinclusieve strategieën, verdiept volume en
-        toegankelijk groendak.
+
+  <body>
+    <!-- HEADER -->
+    <header class="hud" data-header>
+      <div class="hud__left">
+        <button
+          class="hud__burger"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="drawer"
+          aria-expanded="false"
+          data-drawer-open
+        >
+          <span class="hud__burgerLines" aria-hidden="true"></span>
+        </button>
+
+        <a class="hud__brand" href="/index.html">
+          <span class="hud__seed" aria-hidden="true"></span>
+          <span class="hud__brandText">ProjectTitle</span>
+        </a>
+      </div>
+
+      <!--NAVIGATION HUD MIDDLE-->
+      <nav class="hud__nav" aria-label="Snelnavigatie" data-nav>
+        <a href="#" class="hud__link"></a>
+        <a href="#" class="hud__link"></a>
+        <a href="#" class="hud__link"></a>
+        <a href="#" class="hud__link"></a>
+        <a href="#" class="hud__link"></a>
+        <a href="#" class="hud__link"></a>
+      </nav>
+
+      <!--right link bubble-->
+      <div class="hud__right">
+        <a class="hud__pill" href="/architecture/index.html">Architectuur →</a>
+      </div>
+
+      <!-- DRAWER MENU -->
+      <div class="drawer" id="drawer" data-drawer aria-hidden="true">
+        <div class="drawer__backdrop" data-drawer-close></div>
+
+        <aside
+          class="drawer__panel"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Menu"
+          tabindex="-1"
+        >
+          <div class="drawer__top">
+            <div class="drawer__title">
+              <span class="drawer__seed" aria-hidden="true"></span>
+              <div>
+                <div class="drawer__name">Navigate</div>
+                <div class="drawer__meta">----</div>
+              </div>
+            </div>
+
+            <button
+              class="drawer__close"
+              type="button"
+              aria-label="Close menu"
+              data-drawer-close
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="drawer__content">
+            <div class="drawer__visual">
+              <img src="/assets/nav/garden.jpg" alt="" loading="lazy" />
+              <div class="drawer__visualOverlay">
+                <div class="drawer__visualTitle">The Garden</div>
+                <div class="drawer__visualSub">Immersive · games · foto</div>
+              </div>
+            </div>
+
+            <nav class="drawer__nav" aria-label="Main navigation">
+              <a class="drawer__link" href="/index.html">
+                <span class="drawer__icon" aria-hidden="true">◼︎</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">Main</span>
+                  <span class="drawer__desc">Landing / keuze</span>
+                </span>
+              </a>
+
+              <a class="drawer__link is-active" href="/architecture/index.html">
+                <span class="drawer__icon" aria-hidden="true">▦</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">Architectuur</span>
+                  <span class="drawer__desc"
+                    >Strak · projecten · uitwerking</span
+                  >
+                </span>
+              </a>
+
+              <a class="drawer__mini" href="/architecture/index.html#projecten"
+                >→ Projecten</a
+              >
+
+              <a class="drawer__link" href="/garden/index.html">
+                <span class="drawer__icon" aria-hidden="true">✳︎</span>
+                <span class="drawer__text">
+                  <span class="drawer__label">The Garden</span>
+                  <span class="drawer__desc">Immersive · games · foto</span>
+                </span>
+              </a>
+              <a class="drawer__mini" href="#games">→ Games</a>
+              <a class="drawer__mini" href="#photo">→ Foto</a>
+              <a class="drawer__mini" href="#lab">→ Lab</a>
+              <a class="drawer__mini" href="#archive">→ Archive</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content">
+      <!-- HERO -->
+      
+      <section class="section hero">
+  <div class="container hero__inner">
+    <!-- LEFT -->
+    <div class="hero__content">
+      <h1 class="hero__title">Trion</h1>
+
+      <p class="hero__eyebrow">HVA | 2024–2025 | Q2</p>
+
+      <p class="hero__desc">
+        Korte projectbeschrijving in 2–4 zinnen. Wat is het project, wat was de
+        opgave en waar lag de focus van het ontwerp.
       </p>
 
-      <div class="p-tags">
-        <span class="tag">Concept</span>
-        <span class="tag">Constructie</span>
-        <span class="tag">Klimaat</span>
+      <div class="hero__tools">
+        <h3 class="hero__toolsTitle">Gebruikte programma’s</h3>
+
+        <div class="hero__meta">
+          <span class="tag">Sketchup</span>
+          <span class="tag">Affinity Designer</span>
+          <span class="tag">Affinity Publisher</span>
+        </div>
       </div>
     </div>
 
-    <div class="p-hero__media">
-      <!-- Klikbaar (lightbox) -->
-      <a
-        class="media media--hero"
-        href="../../assets/mixed-use/hero.jpg"
-        data-lightbox
-        data-alt="Mixed-use hero"
-        data-caption="Hero — totaalbeeld / key render"
-      >
-        <img
-          src="../../assets/mixed-use/hero.jpg"
-          alt="Mixed-use hero"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </header>
-
-  <!-- BLOCK 2: CONTEXT (2-column text) -->
-  <div class="p-block p-context" data-reveal>
-    <div>
-      <h3 class="p-h">Context</h3>
-      <p class="p-t">
-        Korte context: locatie, doelgroep, thema, randvoorwaarden. 4–6 zinnen
-        max.
-      </p>
-    </div>
-    <div>
-      <h3 class="p-h">Vraag / opdracht</h3>
-      <p class="p-t">
-        Wat moest je oplossen? Wat was de kernvraag? Houd het scherp en
-        zakelijk.
-      </p>
-    </div>
-  </div>
-
-  <!-- BLOCK 3: KEY IMAGE + CAPTION (full width) -->
-  <div class="p-block p-full" data-reveal>
-    <a
-      class="media media--full"
-      href="assets/img/architecture/projects/greengym/01.jpg"
-      data-lightbox
-      data-alt="Greengym key diagram"
-      data-caption="Key diagram — massa / routing / dak"
-    >
+    <!-- RIGHT -->
+    <figure class="hero__media">
+      
       <img
-        src="assets/img/architecture/projects/greengym/01.jpg"
-        alt="Greengym key diagram"
-        loading="lazy"
+        src="/assets/img/mixed-use/hero.webp"
+        alt="Hero image beschrijving"
+        loading="eager"
       />
-    </a>
-    <p class="p-cap">
-      Caption: wat zien we en waarom is dit belangrijk? 1 zin.
-    </p>
+     
+    </figure>
   </div>
-
-  <!-- BLOCK 4: SPLIT (image left, text right) -->
-  <div class="p-block p-split" data-reveal>
-    <a
-      class="media media--split"
-      href="assets/img/architecture/projects/greengym/02.jpg"
-      data-lightbox
-      data-alt="Greengym section"
-      data-caption="Doorsnede — relatie maaiveld / sportzaal / dak"
-    >
-      <img
-        src="assets/img/architecture/projects/greengym/02.jpg"
-        alt="Greengym section"
-        loading="lazy"
-      />
-    </a>
-    <div class="p-split__text">
-      <h3 class="p-h">Ruimtelijke logica</h3>
-      <p class="p-t">
-        Leg de sequentie uit: entree → routing → hoofdruimte → secundaire
-        ruimtes. Max 8–10 regels.
-      </p>
-      <ul class="p-list">
-        <li>1 kernpunt</li>
-        <li>2 kernpunt</li>
-        <li>3 kernpunt</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- BLOCK 5: GRID GALLERY (2–4 images) -->
-  <div class="p-block p-gallery" data-reveal>
-    <h3 class="p-h">Galerij</h3>
-    <div class="gallery">
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/03.jpg"
-        data-lightbox
-        data-alt="Image 03"
-        data-caption="Gevel / materialiteit"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/03.jpg"
-          alt="Image 03"
-          loading="lazy"
-        />
-      </a>
-
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/04.jpg"
-        data-lightbox
-        data-alt="Image 04"
-        data-caption="Plattegrond"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/04.jpg"
-          alt="Image 04"
-          loading="lazy"
-        />
-      </a>
-
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/05.jpg"
-        data-lightbox
-        data-alt="Image 05"
-        data-caption="Detail / knoop"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/05.jpg"
-          alt="Image 05"
-          loading="lazy"
-        />
-      </a>
-
-      <a
-        class="media media--tile"
-        href="assets/img/architecture/projects/greengym/06.jpg"
-        data-lightbox
-        data-alt="Image 06"
-        data-caption="Sfeer / render"
-      >
-        <img
-          src="assets/img/architecture/projects/greengym/06.jpg"
-          alt="Image 06"
-          loading="lazy"
-        />
-      </a>
-    </div>
-  </div>
-
-  <!-- BLOCK 6: METRICS / QUICK FACTS -->
-  <div class="p-block p-facts" data-reveal>
-    <h3 class="p-h">Quick facts</h3>
-    <dl class="facts">
-      <div class="fact">
-        <dt>Rol</dt>
-        <dd>Ontwerp + uitwerking</dd>
-      </div>
-      <div class="fact">
-        <dt>Focus</dt>
-        <dd>Natuurinclusief + constructie</dd>
-      </div>
-      <div class="fact">
-        <dt>Tools</dt>
-        <dd>SketchUp / Layout / Rhino</dd>
-      </div>
-      <div class="fact">
-        <dt>Output</dt>
-        <dd>Plattegronden · Doorsnedes · Details</dd>
-      </div>
-    </dl>
-  </div>
-
-  <!-- BLOCK 7: PROCESS (steps) -->
-  <div class="p-block p-steps" data-reveal>
-    <h3 class="p-h">Proces</h3>
-    <ol class="steps">
-      <li><strong>Analyse</strong> — site, zon, wind, routing, programma</li>
-      <li><strong>Concept</strong> — massa + dakstrategie + sequentie</li>
-      <li><strong>Uitwerking</strong> — constructie, schil, details</li>
-      <li><strong>Resultaat</strong> — presentatie + reflectie</li>
-    </ol>
-  </div>
-
-  <!-- BLOCK 8: REFLECTION + NEXT -->
-  <footer class="p-block p-end" data-reveal>
-    <div class="p-end__text">
-      <h3 class="p-h">Reflectie</h3>
-      <p class="p-t">
-        3–5 zinnen: wat werkte, wat zou je anders doen, wat heb je geleerd.
-      </p>
-    </div>
-
-    <div class="p-end__actions">
-      <a class="btn" href="../index.html#">Terug naar overzicht</a>
-      <a class="btn btn--accent" href="#project-bezinning"
-        >Volgende project →</a
-      >
-    </div>
-  </footer>
 </section>
+<section class="section split" id="overview">
+  <div class="container split__inner">
+    <!-- LEFT: text -->
+    <div class="split__col split__col--left">
+      <h2 class="h2">Overview</h2>
+
+      <p class="muted">
+        1–2 alinea’s max. Wat is de opgave, wat is het concept, en wat was jouw
+        rol of focus binnen het project. Geen proces, geen tools.
+      </p>
+    </div>
+
+    <!-- RIGHT: media -->
+    <div class="split__col split__col--right">
+      <figure class="media">
+        <img
+          src="/assets/img/mixed-use/Massa bouwblok.webp"
+          alt="Overzichtsbeeld (concept / axon / render)"
+          loading="lazy"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
+      <!-- CONTENT SECTIONS -->
+    </main>
+
+    <!-- FOOTER -->
+
+    <!-- JS -->
+    <script src="/js/header.js" defer></script>
+  </body>
+</html>
